@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="2 Lýsandi tölfræði fyrir stakar breytur | _main.utf8" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+
+
+
+<meta name="description" content="2 Lýsandi tölfræði fyrir stakar breytur | _main.utf8">
+
+<title>2 Lýsandi tölfræði fyrir stakar breytur | _main.utf8</title>
+
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/envisioned.css" rel="stylesheet" />
+<script src="https://use.typekit.net/ajy6rnl.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+<!-- <link rel="stylesheet" href="css/envisioned.css"/> -->
+<link rel="stylesheet" href="css/tablesaw-stackonly.css"/>
+<link rel="stylesheet" href="css/nudge.css"/>
+<link rel="stylesheet" href="css/sourcesans.css"/>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="afh.css" type="text/css" />
+
+
+</head>
+
+<body>
+
+<!--bookdown:toc:start-->
+
+<nav class="pushy pushy-left" id="TOC">
+<ul>
+<li><a href="#inngangur"><span class="toc-section-number">1</span> Inngangur</a>
+<ul>
+<li><a href="#markmið"><span class="toc-section-number">1.1</span> Markmið</a></li>
+<li><a href="#fyrir-hverja-er-þessi-bók"><span class="toc-section-number">1.2</span> Fyrir hverja er þessi bók?</a></li>
+<li><a href="#verkfæri"><span class="toc-section-number">1.3</span> Verkfæri</a>
+<ul>
+<li><a href="#google-sheets"><span class="toc-section-number">1.3.1</span> Google Sheets</a></li>
+<li><a href="#r"><span class="toc-section-number">1.3.2</span> R</a></li>
+</ul></li>
+<li><a href="#þakkir"><span class="toc-section-number">1.4</span> Þakkir</a></li>
+</ul></li>
+<li><a href="#part-talnagögn">(PART) Talnagögn</a>
+<ul>
+<li><a href="#make-sure-you-know-what-you-did"><span class="toc-section-number">1.5</span> Make Sure You Know What You Did</a></li>
+<li><a href="#use-version-control"><span class="toc-section-number">1.6</span> Use Version Control</a></li>
+<li><a href="#back-up-your-work"><span class="toc-section-number">1.7</span> Back Up Your Work</a></li>
+</ul></li>
+<li><a href="#lýsandi-tölfræði-fyrir-stakar-breytur"><span class="toc-section-number">2</span> Lýsandi tölfræði fyrir stakar breytur</a>
+<ul>
+<li><a href="#use-a-text-editor"><span class="toc-section-number">2.1</span> Use a Text Editor</a></li>
+<li><a href="#use-markdown"><span class="toc-section-number">2.2</span> Use Markdown</a></li>
+<li><a href="#use-r-with-ess-or-rstudio"><span class="toc-section-number">2.3</span> Use R with ESS or RStudio</a></li>
+</ul></li>
+<li><a href="#samanburður-á-milli-hópa-með-lýsandi-tölfræði"><span class="toc-section-number">3</span> Samanburður á milli hópa með lýsandi tölfræði</a>
+<ul>
+<li><a href="#minimize-error"><span class="toc-section-number">3.1</span> Minimize Error</a></li>
+<li><a href="#from-server-farm-to-data-table"><span class="toc-section-number">3.2</span> From Server Farm to Data Table</a></li>
+<li><a href="#use-rmarkdown-and-knitr"><span class="toc-section-number">3.3</span> Use RMarkdown and <code>knitr</code></a></li>
+</ul></li>
+<li><a href="#part-töflur-og-gröf">(PART) Töflur og gröf</a>
+<ul>
+<li><a href="#automation-with-make"><span class="toc-section-number">3.4</span> Automation with <code>make</code></a></li>
+</ul></li>
+<li><a href="#r-og-fyrsta-grafið"><span class="toc-section-number">4</span> R og fyrsta grafið</a>
+<ul>
+<li><a href="#installation-instructions-mac-os-x"><span class="toc-section-number">4.1</span> Installation Instructions (Mac OS X)</a>
+<ul>
+<li><a href="#before-you-begin"><span class="toc-section-number">4.1.1</span> Before you Begin</a></li>
+<li><a href="#getting-the-starter-kit"><span class="toc-section-number">4.1.2</span> Getting the Starter Kit</a></li>
+<li><a href="#prerequisites"><span class="toc-section-number">4.1.3</span> Prerequisites</a></li>
+<li><a href="#setup"><span class="toc-section-number">4.1.4</span> Setup</a></li>
+</ul></li>
+<li><a href="#using-marked"><span class="toc-section-number">4.2</span> Using Marked</a></li>
+</ul></li>
+<li><a href="#veldu-graf-sem-hentar-gögnunum"><span class="toc-section-number">5</span> Veldu graf sem hentar gögnunum</a>
+<ul>
+<li><a href="#why-bother-again"><span class="toc-section-number">5.1</span> Why Bother, Again?</a></li>
+<li><a href="#but-alternatives-might-be-better-for-you"><span class="toc-section-number">5.2</span> But Alternatives Might Be Better for You</a></li>
+<li><a href="#a-broader-perspective"><span class="toc-section-number">5.3</span> A Broader Perspective</a></li>
+</ul></li>
+<li><a href="#gröf-fyrir-fjölbreytt-gögn"><span class="toc-section-number">6</span> Gröf fyrir fjölbreytt gögn</a>
+<ul>
+<li><a href="#basic-tools"><span class="toc-section-number">6.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates"><span class="toc-section-number">6.2</span> Helpers and Templates</a></li>
+<li><a href="#guides"><span class="toc-section-number">6.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services"><span class="toc-section-number">6.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#framsetning"><span class="toc-section-number">7</span> Framsetning</a>
+<ul>
+<li><a href="#basic-tools-1"><span class="toc-section-number">7.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-1"><span class="toc-section-number">7.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-1"><span class="toc-section-number">7.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-1"><span class="toc-section-number">7.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#part-gagnaöflun-og--umbreyting">(PART) Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="#basic-tools-2"><span class="toc-section-number">7.5</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-2"><span class="toc-section-number">7.6</span> Helpers and Templates</a></li>
+<li><a href="#guides-2"><span class="toc-section-number">7.7</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-2"><span class="toc-section-number">7.8</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#gagnaöflun-og--umbreyting"><span class="toc-section-number">8</span> Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="#basic-tools-3"><span class="toc-section-number">8.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-3"><span class="toc-section-number">8.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-3"><span class="toc-section-number">8.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-3"><span class="toc-section-number">8.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#gögn-úr-ólíkum-áttum-í-eina-sæng"><span class="toc-section-number">9</span> Gögn úr ólíkum áttum í eina sæng</a>
+<ul>
+<li><a href="#basic-tools-4"><span class="toc-section-number">9.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-4"><span class="toc-section-number">9.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-4"><span class="toc-section-number">9.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-4"><span class="toc-section-number">9.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#hvað-svo"><span class="toc-section-number">10</span> Hvað svo?</a>
+<ul>
+<li><a href="#basic-tools-5"><span class="toc-section-number">10.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-5"><span class="toc-section-number">10.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-5"><span class="toc-section-number">10.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-5"><span class="toc-section-number">10.4</span> Paid Applications and Services</a></li>
+</ul></li>
+</ul>
+</nav>
+
+<!--bookdown:toc:end-->
+
+<div class="menu-btn"><h3>☰ Kaflar</h3></div>
+
+<div class="site-overlay"></div>
+
+
+<div class="row">
+<div class="col-sm-12">
+
+<nav class="pushy pushy-left" id="TOC">
+<ul>
+<li><a href="index.html#inngangur"><span class="toc-section-number">1</span> Inngangur</a>
+<ul>
+<li><a href="index.html#markmið"><span class="toc-section-number">1.1</span> Markmið</a></li>
+<li><a href="index.html#fyrir-hverja-er-þessi-bók"><span class="toc-section-number">1.2</span> Fyrir hverja er þessi bók?</a></li>
+<li><a href="index.html#verkfæri"><span class="toc-section-number">1.3</span> Verkfæri</a>
+<ul>
+<li><a href="index.html#google-sheets"><span class="toc-section-number">1.3.1</span> Google Sheets</a></li>
+<li><a href="index.html#r"><span class="toc-section-number">1.3.2</span> R</a></li>
+</ul></li>
+<li><a href="index.html#þakkir"><span class="toc-section-number">1.4</span> Þakkir</a></li>
+</ul></li>
+<li><a href="#part-talnagögn">(PART) Talnagögn</a>
+<ul>
+<li><a href="index.html#make-sure-you-know-what-you-did"><span class="toc-section-number">1.5</span> Make Sure You Know What You Did</a></li>
+<li><a href="index.html#use-version-control"><span class="toc-section-number">1.6</span> Use Version Control</a></li>
+<li><a href="index.html#back-up-your-work"><span class="toc-section-number">1.7</span> Back Up Your Work</a></li>
+</ul></li>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lýsandi-tölfræði-fyrir-stakar-breytur"><span class="toc-section-number">2</span> Lýsandi tölfræði fyrir stakar breytur</a>
+<ul>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#use-a-text-editor"><span class="toc-section-number">2.1</span> Use a Text Editor</a></li>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#use-markdown"><span class="toc-section-number">2.2</span> Use Markdown</a></li>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#use-r-with-ess-or-rstudio"><span class="toc-section-number">2.3</span> Use R with ESS or RStudio</a></li>
+</ul></li>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#samanburður-á-milli-hópa-með-lýsandi-tölfræði"><span class="toc-section-number">3</span> Samanburður á milli hópa með lýsandi tölfræði</a>
+<ul>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#minimize-error"><span class="toc-section-number">3.1</span> Minimize Error</a></li>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#from-server-farm-to-data-table"><span class="toc-section-number">3.2</span> From Server Farm to Data Table</a></li>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#use-rmarkdown-and-knitr"><span class="toc-section-number">3.3</span> Use RMarkdown and <code>knitr</code></a></li>
+</ul></li>
+<li><a href="#part-töflur-og-gröf">(PART) Töflur og gröf</a>
+<ul>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#automation-with-make"><span class="toc-section-number">3.4</span> Automation with <code>make</code></a></li>
+</ul></li>
+<li><a href="r-og-fyrsta-grafið.html#r-og-fyrsta-grafið"><span class="toc-section-number">4</span> R og fyrsta grafið</a>
+<ul>
+<li><a href="r-og-fyrsta-grafið.html#installation-instructions-mac-os-x"><span class="toc-section-number">4.1</span> Installation Instructions (Mac OS X)</a>
+<ul>
+<li><a href="r-og-fyrsta-grafið.html#before-you-begin"><span class="toc-section-number">4.1.1</span> Before you Begin</a></li>
+<li><a href="r-og-fyrsta-grafið.html#getting-the-starter-kit"><span class="toc-section-number">4.1.2</span> Getting the Starter Kit</a></li>
+<li><a href="r-og-fyrsta-grafið.html#prerequisites"><span class="toc-section-number">4.1.3</span> Prerequisites</a></li>
+<li><a href="r-og-fyrsta-grafið.html#setup"><span class="toc-section-number">4.1.4</span> Setup</a></li>
+</ul></li>
+<li><a href="r-og-fyrsta-grafið.html#using-marked"><span class="toc-section-number">4.2</span> Using Marked</a></li>
+</ul></li>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#veldu-graf-sem-hentar-gögnunum"><span class="toc-section-number">5</span> Veldu graf sem hentar gögnunum</a>
+<ul>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#why-bother-again"><span class="toc-section-number">5.1</span> Why Bother, Again?</a></li>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#but-alternatives-might-be-better-for-you"><span class="toc-section-number">5.2</span> But Alternatives Might Be Better for You</a></li>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#a-broader-perspective"><span class="toc-section-number">5.3</span> A Broader Perspective</a></li>
+</ul></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#gröf-fyrir-fjölbreytt-gögn"><span class="toc-section-number">6</span> Gröf fyrir fjölbreytt gögn</a>
+<ul>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#basic-tools"><span class="toc-section-number">6.1</span> Basic Tools</a></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#helpers-and-templates"><span class="toc-section-number">6.2</span> Helpers and Templates</a></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#guides"><span class="toc-section-number">6.3</span> Guides</a></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#paid-applications-and-services"><span class="toc-section-number">6.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="framsetning.html#framsetning"><span class="toc-section-number">7</span> Framsetning</a>
+<ul>
+<li><a href="framsetning.html#basic-tools-1"><span class="toc-section-number">7.1</span> Basic Tools</a></li>
+<li><a href="framsetning.html#helpers-and-templates-1"><span class="toc-section-number">7.2</span> Helpers and Templates</a></li>
+<li><a href="framsetning.html#guides-1"><span class="toc-section-number">7.3</span> Guides</a></li>
+<li><a href="framsetning.html#paid-applications-and-services-1"><span class="toc-section-number">7.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#part-gagnaöflun-og--umbreyting">(PART) Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="framsetning.html#basic-tools-2"><span class="toc-section-number">7.5</span> Basic Tools</a></li>
+<li><a href="framsetning.html#helpers-and-templates-2"><span class="toc-section-number">7.6</span> Helpers and Templates</a></li>
+<li><a href="framsetning.html#guides-2"><span class="toc-section-number">7.7</span> Guides</a></li>
+<li><a href="framsetning.html#paid-applications-and-services-2"><span class="toc-section-number">7.8</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="gagnaöflun-og-umbreyting.html#gagnaöflun-og--umbreyting"><span class="toc-section-number">8</span> Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="gagnaöflun-og-umbreyting.html#basic-tools-3"><span class="toc-section-number">8.1</span> Basic Tools</a></li>
+<li><a href="gagnaöflun-og-umbreyting.html#helpers-and-templates-3"><span class="toc-section-number">8.2</span> Helpers and Templates</a></li>
+<li><a href="gagnaöflun-og-umbreyting.html#guides-3"><span class="toc-section-number">8.3</span> Guides</a></li>
+<li><a href="gagnaöflun-og-umbreyting.html#paid-applications-and-services-3"><span class="toc-section-number">8.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#gögn-úr-ólíkum-áttum-í-eina-sæng"><span class="toc-section-number">9</span> Gögn úr ólíkum áttum í eina sæng</a>
+<ul>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#basic-tools-4"><span class="toc-section-number">9.1</span> Basic Tools</a></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#helpers-and-templates-4"><span class="toc-section-number">9.2</span> Helpers and Templates</a></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#guides-4"><span class="toc-section-number">9.3</span> Guides</a></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#paid-applications-and-services-4"><span class="toc-section-number">9.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="hvað-svo.html#hvað-svo"><span class="toc-section-number">10</span> Hvað svo?</a>
+<ul>
+<li><a href="hvað-svo.html#basic-tools-5"><span class="toc-section-number">10.1</span> Basic Tools</a></li>
+<li><a href="hvað-svo.html#helpers-and-templates-5"><span class="toc-section-number">10.2</span> Helpers and Templates</a></li>
+<li><a href="hvað-svo.html#guides-5"><span class="toc-section-number">10.3</span> Guides</a></li>
+<li><a href="hvað-svo.html#paid-applications-and-services-5"><span class="toc-section-number">10.4</span> Paid Applications and Services</a></li>
+</ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="lýsandi-tölfræði-fyrir-stakar-breytur" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Lýsandi tölfræði fyrir stakar breytur</h1>
+<div id="use-a-text-editor" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Use a Text Editor</h2>
+<p>If you are going to be doing quantitative analysis of any kind then
+you should write using a good text editor. The same can be said, I’d
+argue, for working with any highly structured document subject to a
+lot of revision, such as a scholarly paper. Text editors are different
+from word processors. Unlike applications such as Microsoft Word, text
+editors generally don’t make a big effort to make what you write look
+like as though it is being written on a printed page.<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> For further argument about the advantages of text-editors over
+word processors see Allin Cottrell’s polemic, “<a href="http://www.ecn.wfu.edu/~cottrell/wp.html">Word Processors:
+Stupid and Inefficient</a>”.</span> Instead, they
+focus on working with text efficiently, while keeping it in a plain
+and portable format, as opposed to binary file formats like <code>.docx</code>. Figure <a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#fig:emacstext">2.1</a> shows an example.</p>
+<p>Text editors can also help you where word processors are not much use.
+If you are writing code to do some statistical analysis, for instance,
+then at a minimum a good editor will highlight keywords and operators
+in a way that makes the code more readable. Typically, it will also
+passively signal to you when you’ve done something wrong syntactically
+(such as forget a closing brace or semicolon or quotation mark), and
+<a href="http://en.wiktionary.org/wiki/automagical">automagically</a> indent or
+tidy up your code as you write it. More advanced editors can work with
+a <a href="http://en.wikipedia.org/wiki/Lint_(software)">linter</a> to more
+actively check and flag stylistic or syntactical errors as you go. If
+you are writing a scholarly paper or a dissertation that incorporates
+data of any sort, and especially numerical data, a good text editor
+can make it easier to maintain control of things. Just as the actual
+numbers are crunched by your stats program—not your text
+editor—the typesetting of your paper is handled by a specialized
+application, too. That tool should automatically take care of things
+like entries in your bibliography, the labelling of tables and
+figures, and cross-references and other paraphernalia. The best
+editors can closely integrate with the tools you use to do the various
+pieces of your work.</p>
+<div class="figure"><span id="fig:emacstext"></span>
+<p class="caption marginnote shownote">
+Mynd 2.1: Working on part of this document in Emacs.
+</p>
+<img src="figures/emacs-texted.png" alt="Working on part of this document in Emacs." width="100%"  />
+</div>
+<p>Emacs is a text editor, in the same way the blue whale is a mammal. It
+does the things I have just described, and rather more besides, if you
+want it to. Combining Emacs with some other applications and add-ons
+allows you to manage writing and data-analysis effectively. If it
+seems odd to do a bunch of different tasks inside an editor, the
+blogger Rekado makes a
+<a href="http://elephly.net/posts/2016-02-14-ilovefs-emacs.html">useful analogy</a>
+to the way people use web browsers:</p>
+<blockquote>
+<p>Just like a browser is used by many as a platform for running
+applications operating on some HTML document, Emacs is a platform
+for anything that can “reasonably” (this is up for interpretation)
+be mapped to buffers of text. Applications in browsers are written
+in JavaScript, applications in Emacs are written in EmacsLisp (also
+called “elisp”). … If you have used your web browser (or have
+observed someone use their web browser) to play games, listen to
+music, watch videos, read and compose email, edit text (e.g. by
+contributing to the Wikipedia), chat with friends (or chat about
+foes), read documentation, installed an extension—well, then the
+notion of a generic tool as a platform should not be a foreign
+concept to you. Emacs can be understood as such a generic tool
+providing a text interface (one of which may be a file editor).</p>
+</blockquote>
+<p>While very powerful and flexible, Emacs can be annoying. Indeed, to
+many people encountering it for the first time—especially those used
+to standard applications on Windows or Mac OS—its conventions seem
+bizarre and byzantine. As applications go, Emacs is quite ancient. The
+first version was written by Richard Stallman in the 1970s. Because it
+evolved in a much earlier era of computing (before the development of
+decent graphical displays, for instance, and window managers, and
+possibly also fire), it doesn’t share many of the conventions of
+modern applications. Like most powerful text editors, Emacs offers
+many opportunities to waste your time learning its particular
+conventions, tweaking its settings, and generally customizing it.
+There are several good alternatives on each major platform.</p>
+<p>Given all that, why mention it in the first place? Partly because it’s
+the editor I use. Partly because it is available for all of the main
+desktop and laptop computing plaforms. And partly because it is very,
+<em>very</em> good at doing what I want it to do. There are many good reasons
+to use something like <a href="https://macromates.com/download">TextMate</a>, or
+<a href="https://www.sublimetext.com">Sublime Text</a> instead of Emacs.
+Similarly, when doing data analysis with R, you may just want to use
+the <a href="http://rstudio.com">RStudio environment</a>. You will do fine if you
+go with these alternatives.</p>
+</div>
+<div id="use-markdown" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Use Markdown</h2>
+<p>When you write papers in plain text, how do you manage the formatting,
+sectioning, and other related aspects of your document?
+<a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> is a
+loosely-standardized way of writing plain text that includes
+information about the formatting of your document. It was originally
+developed by John Gruber, with input from Aaron Swartz. The aim was to
+make a simple format that could incorporate structural information
+about the document (such as headings and subheadings, <em>emphasis</em>,
+<a href="http://daringfireball.net/markdown">hyperlinks</a>, lists, footnotes,
+and so on), with minimal loss of readability. Formats like HTML or TeX
+are much more extensive markup languages, but Markdown was meant to be
+simple. Over the years it has become a <em>de facto</em> standard. Text
+editors and note-taking applications support it, and tools exist to
+convert Markdown not just into HTML (its original target output
+format) but many other document types as well. lst:markdown
+shows the markdown source for part of this document.</p>
+<div class="sourceCode" id="lst:markdown" caption="The Markdown source for a nearby part of this document."><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="lst:markdown-1"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:markdown-2"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-2" aria-hidden="true" tabindex="-1"></a><span class="fu"># Use Markdown</span></span>
+<span id="lst:markdown-3"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:markdown-4"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-4" aria-hidden="true" tabindex="-1"></a>When you write papers in plain text, how do you manage the formatting,</span>
+<span id="lst:markdown-5"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-5" aria-hidden="true" tabindex="-1"></a>sectioning, and other related aspects of your document?</span>
+<span id="lst:markdown-6"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-6" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Markdown</span><span class="co">](http://en.wikipedia.org/wiki/Markdown)</span> is a</span>
+<span id="lst:markdown-7"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-7" aria-hidden="true" tabindex="-1"></a>loosely-standardized way. It was originally developed by John Gruber, </span>
+<span id="lst:markdown-8"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-8" aria-hidden="true" tabindex="-1"></a>with input from Aaron Swartz. The aim was to make a simple format </span>
+<span id="lst:markdown-9"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-9" aria-hidden="true" tabindex="-1"></a>that could incorporate structural information about the document </span>
+<span id="lst:markdown-10"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-10" aria-hidden="true" tabindex="-1"></a>(such as headings and subheadings, *emphasis*,</span>
+<span id="lst:markdown-11"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-11" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">hyperlinks</span><span class="co">](http://daringfireball.net/markdown)</span>, lists, footnotes,</span>
+<span id="lst:markdown-12"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-12" aria-hidden="true" tabindex="-1"></a>and so on), with minimal loss of readability. Formats like HTML or TeX</span>
+<span id="lst:markdown-13"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-13" aria-hidden="true" tabindex="-1"></a>are much more extensive markup languages, but Markdown was meant to be</span>
+<span id="lst:markdown-14"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-14" aria-hidden="true" tabindex="-1"></a>simple. Over the years it has become a *de facto* standard. Text</span>
+<span id="lst:markdown-15"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-15" aria-hidden="true" tabindex="-1"></a>editors and note-taking applications support it, and tools exist to</span>
+<span id="lst:markdown-16"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-16" aria-hidden="true" tabindex="-1"></a>convert Markdown not just into HTML (its original target output</span>
+<span id="lst:markdown-17"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-17" aria-hidden="true" tabindex="-1"></a>format) but many other document types as well. lst:markdown-example shows </span>
+<span id="lst:markdown-18"><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lst:markdown-18" aria-hidden="true" tabindex="-1"></a>the markdown source for this paragraph and its subheading.</span></code></pre></div>
+<p>The excerpt shown in lst:markdown shows a few of the most common
+Markdown conventions, most notably how it represents headings and
+subheadings (a <code>#</code> symbol for a top-level header, with <code>##</code> for the
+next level down, and so on), how it represents hyperlinks, and how it
+emphasizes text. Once your text is marked up in in this format, you
+need a bit of software to get from there to a properly readable HTML,
+PDF, or Word file. This is what <a href="http://pandoc.org">pandoc</a> is for—more on that <a href="http://plain-text.co/pull-it-together.html#pull-it-together">later on</a>.</p>
+<p>There are a number of Markdown variants, or “flavors”, that have
+extended it to manage things like cross-references and labels,
+citations, and other textual elements. I recommend
+using
+<a href="http://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc’s markdown</a>,
+which can handle all of these. This means you can use Markdown to write in plain text, while not having to worry whether your reference list is complete, or whether cross-references (to ‘Figure 3’ for example) remain correct after you move things around in your text.</p>
+</div>
+<div id="use-r-with-ess-or-rstudio" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Use R with ESS or RStudio</h2>
+<p>You will probably be doing some—perhaps a great deal—of
+quantitative data analysis. R is an environment for statistical
+computing. It’s well-supported, continually improving, and has a very
+active expert-user community. The documentation that comes with the
+software is complete, if somewhat terse, but there are a large number
+of excellent reference and teaching texts that illustrate its use.
+These include dalgaard08introdstatisr,
+venables02moderappliedstatissplus, maindonald03dataanalygraphusingr,
+fox02rspluscompanappliedregres, harrell16regresmodelstrat,
+matloff11artrprogr, and gelmanhill07:dataanalysis. Although it is a
+command-line tool at its core, it can easily be used in conjunction
+with the <a href="http://rstudio.com">RStudio IDE</a>. You can download R from
+<a href="http://www.r-project.org/">The R Project Homepage</a>.</p>
+<p>R can be used directly within Emacs by way of a package called ESS
+(for “Emacs Speaks Statistics”). As shown in Figure <a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#fig:ess">2.2</a>, it allows you
+to work with your code in one Emacs frame and a live R session in
+another right beside it. Because everything is inside Emacs, it is
+easy to do things like send a chunk of your code over to R using a
+keystroke. This is a very efficient way of doing interactive data
+analysis while building up code you can use again in future.</p>
+<div class="figure"><span id="fig:ess"></span>
+<p class="caption marginnote shownote">
+Mynd 2.2: Working with R in Emacs using ESS. A document containing R code is open in the top half of the screen. Below the divider, an R session is running, also inside Emacs. Code from the top pane is sent to the bottom with a keyboard shortcut, where it is evaluated by R. We can also jump down to the bottom pane and do work there. Small details like a lint checker, active line highlighting, and revision-control information are also visible.
+</p>
+<img src="figures/emacs-ess-compact.png" alt="Working with R in Emacs using ESS. A document containing R code is open in the top half of the screen. Below the divider, an R session is running, also inside Emacs. Code from the top pane is sent to the bottom with a keyboard shortcut, where it is evaluated by R. We can also jump down to the bottom pane and do work there. Small details like a lint checker, active line highlighting, and revision-control information are also visible." width="100%"  />
+</div>
+<p>You’ll present your results in papers, but also in talks where you
+will likely use some kind of presentation software. You can use
+Microsoft PowerPoint or Apple’s
+<a href="http://www.apple.com/iwork/keynote/">Keynote</a>. Or,
+you can produce HTML or
+PDF slides
+<a href="http://rmarkdown.rstudio.com/ioslides_presentation_format.html">directly</a>
+from plain text documents.<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> The actual business of <em>giving</em> talks based on your work is beyond
+the scope of this discussion. Suffice to say that there is plenty of
+good advice available via Google, and you should pay attention to
+it.</span></p>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="index.html"><button class="btn btn-default">Previous</button></a>
+<a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/tablesaw-stackonly.js"></script>
+<script src="js/nudge.min.js"></script>
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

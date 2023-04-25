@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="4 Framsetning gagna í töflum og gröfum | _main.utf8" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+
+
+
+<meta name="description" content="4 Framsetning gagna í töflum og gröfum | _main.utf8">
+
+<title>4 Framsetning gagna í töflum og gröfum | _main.utf8</title>
+
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/envisioned.css" rel="stylesheet" />
+<script src="https://use.typekit.net/ajy6rnl.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+<!-- <link rel="stylesheet" href="css/envisioned.css"/> -->
+<link rel="stylesheet" href="css/tablesaw-stackonly.css"/>
+<link rel="stylesheet" href="css/nudge.css"/>
+<link rel="stylesheet" href="css/sourcesans.css"/>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="afh.css" type="text/css" />
+
+
+</head>
+
+<body>
+
+<!--bookdown:toc:start-->
+
+<nav class="pushy pushy-left" id="TOC">
+<ul>
+<li><a href="#inngangur"><span class="toc-section-number">1</span> Inngangur</a>
+<ul>
+<li><a href="#markmið"><span class="toc-section-number">1.1</span> Markmið</a></li>
+<li><a href="#fyrir-hverja-er-þessi-bók"><span class="toc-section-number">1.2</span> Fyrir hverja er þessi bók?</a></li>
+<li><a href="#verkfæri"><span class="toc-section-number">1.3</span> Verkfæri</a>
+<ul>
+<li><a href="#google-sheets"><span class="toc-section-number">1.3.1</span> Google Sheets</a></li>
+<li><a href="#r"><span class="toc-section-number">1.3.2</span> R</a></li>
+</ul></li>
+<li><a href="#þakkir"><span class="toc-section-number">1.4</span> Þakkir</a></li>
+</ul></li>
+<li><a href="#part-talnagögn">(PART) Talnagögn</a>
+<ul>
+<li><a href="#make-sure-you-know-what-you-did"><span class="toc-section-number">1.5</span> Make Sure You Know What You Did</a></li>
+<li><a href="#use-version-control"><span class="toc-section-number">1.6</span> Use Version Control</a></li>
+<li><a href="#back-up-your-work"><span class="toc-section-number">1.7</span> Back Up Your Work</a></li>
+</ul></li>
+<li><a href="#lýsandi-tölfræði-fyrir-stakar-breytur"><span class="toc-section-number">2</span> Lýsandi tölfræði fyrir stakar breytur</a>
+<ul>
+<li><a href="#use-a-text-editor"><span class="toc-section-number">2.1</span> Use a Text Editor</a></li>
+<li><a href="#use-markdown"><span class="toc-section-number">2.2</span> Use Markdown</a></li>
+<li><a href="#use-r-with-ess-or-rstudio"><span class="toc-section-number">2.3</span> Use R with ESS or RStudio</a></li>
+</ul></li>
+<li><a href="#samanburður-á-milli-hópa-með-lýsandi-tölfræði"><span class="toc-section-number">3</span> Samanburður á milli hópa með lýsandi tölfræði</a>
+<ul>
+<li><a href="#minimize-error"><span class="toc-section-number">3.1</span> Minimize Error</a></li>
+<li><a href="#from-server-farm-to-data-table"><span class="toc-section-number">3.2</span> From Server Farm to Data Table</a></li>
+<li><a href="#use-rmarkdown-and-knitr"><span class="toc-section-number">3.3</span> Use RMarkdown and <code>knitr</code></a></li>
+</ul></li>
+<li class="part"><span><b>I Töflur og gröf</b></span></li>
+<li><a href="#framsetning-gagna-í-töflum-og-gröfum"><span class="toc-section-number">4</span> Framsetning gagna í töflum og gröfum</a>
+<ul>
+<li><a href="#automation-with-make"><span class="toc-section-number">4.1</span> Automation with <code>make</code></a></li>
+</ul></li>
+<li><a href="#r-og-fyrsta-grafið"><span class="toc-section-number">5</span> R og fyrsta grafið</a>
+<ul>
+<li><a href="#installation-instructions-mac-os-x"><span class="toc-section-number">5.1</span> Installation Instructions (Mac OS X)</a>
+<ul>
+<li><a href="#before-you-begin"><span class="toc-section-number">5.1.1</span> Before you Begin</a></li>
+<li><a href="#getting-the-starter-kit"><span class="toc-section-number">5.1.2</span> Getting the Starter Kit</a></li>
+<li><a href="#prerequisites"><span class="toc-section-number">5.1.3</span> Prerequisites</a></li>
+<li><a href="#setup"><span class="toc-section-number">5.1.4</span> Setup</a></li>
+</ul></li>
+<li><a href="#using-marked"><span class="toc-section-number">5.2</span> Using Marked</a></li>
+</ul></li>
+<li><a href="#veldu-graf-sem-hentar-gögnunum"><span class="toc-section-number">6</span> Veldu graf sem hentar gögnunum</a>
+<ul>
+<li><a href="#why-bother-again"><span class="toc-section-number">6.1</span> Why Bother, Again?</a></li>
+<li><a href="#but-alternatives-might-be-better-for-you"><span class="toc-section-number">6.2</span> But Alternatives Might Be Better for You</a></li>
+<li><a href="#a-broader-perspective"><span class="toc-section-number">6.3</span> A Broader Perspective</a></li>
+</ul></li>
+<li><a href="#gröf-fyrir-fjölbreytt-gögn"><span class="toc-section-number">7</span> Gröf fyrir fjölbreytt gögn</a>
+<ul>
+<li><a href="#basic-tools"><span class="toc-section-number">7.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates"><span class="toc-section-number">7.2</span> Helpers and Templates</a></li>
+<li><a href="#guides"><span class="toc-section-number">7.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services"><span class="toc-section-number">7.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#framsetning"><span class="toc-section-number">8</span> Framsetning</a>
+<ul>
+<li><a href="#basic-tools-1"><span class="toc-section-number">8.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-1"><span class="toc-section-number">8.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-1"><span class="toc-section-number">8.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-1"><span class="toc-section-number">8.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#part-gagnaöflun-og--umbreyting">(PART) Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="#basic-tools-2"><span class="toc-section-number">8.5</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-2"><span class="toc-section-number">8.6</span> Helpers and Templates</a></li>
+<li><a href="#guides-2"><span class="toc-section-number">8.7</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-2"><span class="toc-section-number">8.8</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#gagnaöflun-og--umbreyting"><span class="toc-section-number">9</span> Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="#basic-tools-3"><span class="toc-section-number">9.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-3"><span class="toc-section-number">9.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-3"><span class="toc-section-number">9.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-3"><span class="toc-section-number">9.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#gögn-úr-ólíkum-áttum-í-eina-sæng"><span class="toc-section-number">10</span> Gögn úr ólíkum áttum í eina sæng</a>
+<ul>
+<li><a href="#basic-tools-4"><span class="toc-section-number">10.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-4"><span class="toc-section-number">10.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-4"><span class="toc-section-number">10.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-4"><span class="toc-section-number">10.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#hvað-svo"><span class="toc-section-number">11</span> Hvað svo?</a>
+<ul>
+<li><a href="#basic-tools-5"><span class="toc-section-number">11.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-5"><span class="toc-section-number">11.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-5"><span class="toc-section-number">11.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-5"><span class="toc-section-number">11.4</span> Paid Applications and Services</a></li>
+</ul></li>
+</ul>
+</nav>
+
+<!--bookdown:toc:end-->
+
+<div class="menu-btn"><h3>☰ Kaflar</h3></div>
+
+<div class="site-overlay"></div>
+
+
+<div class="row">
+<div class="col-sm-12">
+
+<nav class="pushy pushy-left" id="TOC">
+<ul>
+<li><a href="index.html#inngangur"><span class="toc-section-number">1</span> Inngangur</a>
+<ul>
+<li><a href="index.html#markmið"><span class="toc-section-number">1.1</span> Markmið</a></li>
+<li><a href="index.html#fyrir-hverja-er-þessi-bók"><span class="toc-section-number">1.2</span> Fyrir hverja er þessi bók?</a></li>
+<li><a href="index.html#verkfæri"><span class="toc-section-number">1.3</span> Verkfæri</a>
+<ul>
+<li><a href="index.html#google-sheets"><span class="toc-section-number">1.3.1</span> Google Sheets</a></li>
+<li><a href="index.html#r"><span class="toc-section-number">1.3.2</span> R</a></li>
+</ul></li>
+<li><a href="index.html#þakkir"><span class="toc-section-number">1.4</span> Þakkir</a></li>
+</ul></li>
+<li><a href="#part-talnagögn">(PART) Talnagögn</a>
+<ul>
+<li><a href="index.html#make-sure-you-know-what-you-did"><span class="toc-section-number">1.5</span> Make Sure You Know What You Did</a></li>
+<li><a href="index.html#use-version-control"><span class="toc-section-number">1.6</span> Use Version Control</a></li>
+<li><a href="index.html#back-up-your-work"><span class="toc-section-number">1.7</span> Back Up Your Work</a></li>
+</ul></li>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lýsandi-tölfræði-fyrir-stakar-breytur"><span class="toc-section-number">2</span> Lýsandi tölfræði fyrir stakar breytur</a>
+<ul>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#use-a-text-editor"><span class="toc-section-number">2.1</span> Use a Text Editor</a></li>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#use-markdown"><span class="toc-section-number">2.2</span> Use Markdown</a></li>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#use-r-with-ess-or-rstudio"><span class="toc-section-number">2.3</span> Use R with ESS or RStudio</a></li>
+</ul></li>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#samanburður-á-milli-hópa-með-lýsandi-tölfræði"><span class="toc-section-number">3</span> Samanburður á milli hópa með lýsandi tölfræði</a>
+<ul>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#minimize-error"><span class="toc-section-number">3.1</span> Minimize Error</a></li>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#from-server-farm-to-data-table"><span class="toc-section-number">3.2</span> From Server Farm to Data Table</a></li>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#use-rmarkdown-and-knitr"><span class="toc-section-number">3.3</span> Use RMarkdown and <code>knitr</code></a></li>
+</ul></li>
+<li class="part"><span><b>I Töflur og gröf</b></span></li>
+<li><a href="framsetning-gagna-í-töflum-og-gröfum.html#framsetning-gagna-í-töflum-og-gröfum"><span class="toc-section-number">4</span> Framsetning gagna í töflum og gröfum</a>
+<ul>
+<li><a href="framsetning-gagna-í-töflum-og-gröfum.html#automation-with-make"><span class="toc-section-number">4.1</span> Automation with <code>make</code></a></li>
+</ul></li>
+<li><a href="r-og-fyrsta-grafið.html#r-og-fyrsta-grafið"><span class="toc-section-number">5</span> R og fyrsta grafið</a>
+<ul>
+<li><a href="r-og-fyrsta-grafið.html#installation-instructions-mac-os-x"><span class="toc-section-number">5.1</span> Installation Instructions (Mac OS X)</a>
+<ul>
+<li><a href="r-og-fyrsta-grafið.html#before-you-begin"><span class="toc-section-number">5.1.1</span> Before you Begin</a></li>
+<li><a href="r-og-fyrsta-grafið.html#getting-the-starter-kit"><span class="toc-section-number">5.1.2</span> Getting the Starter Kit</a></li>
+<li><a href="r-og-fyrsta-grafið.html#prerequisites"><span class="toc-section-number">5.1.3</span> Prerequisites</a></li>
+<li><a href="r-og-fyrsta-grafið.html#setup"><span class="toc-section-number">5.1.4</span> Setup</a></li>
+</ul></li>
+<li><a href="r-og-fyrsta-grafið.html#using-marked"><span class="toc-section-number">5.2</span> Using Marked</a></li>
+</ul></li>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#veldu-graf-sem-hentar-gögnunum"><span class="toc-section-number">6</span> Veldu graf sem hentar gögnunum</a>
+<ul>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#why-bother-again"><span class="toc-section-number">6.1</span> Why Bother, Again?</a></li>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#but-alternatives-might-be-better-for-you"><span class="toc-section-number">6.2</span> But Alternatives Might Be Better for You</a></li>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#a-broader-perspective"><span class="toc-section-number">6.3</span> A Broader Perspective</a></li>
+</ul></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#gröf-fyrir-fjölbreytt-gögn"><span class="toc-section-number">7</span> Gröf fyrir fjölbreytt gögn</a>
+<ul>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#basic-tools"><span class="toc-section-number">7.1</span> Basic Tools</a></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#helpers-and-templates"><span class="toc-section-number">7.2</span> Helpers and Templates</a></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#guides"><span class="toc-section-number">7.3</span> Guides</a></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#paid-applications-and-services"><span class="toc-section-number">7.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="framsetning.html#framsetning"><span class="toc-section-number">8</span> Framsetning</a>
+<ul>
+<li><a href="framsetning.html#basic-tools-1"><span class="toc-section-number">8.1</span> Basic Tools</a></li>
+<li><a href="framsetning.html#helpers-and-templates-1"><span class="toc-section-number">8.2</span> Helpers and Templates</a></li>
+<li><a href="framsetning.html#guides-1"><span class="toc-section-number">8.3</span> Guides</a></li>
+<li><a href="framsetning.html#paid-applications-and-services-1"><span class="toc-section-number">8.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#part-gagnaöflun-og--umbreyting">(PART) Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="framsetning.html#basic-tools-2"><span class="toc-section-number">8.5</span> Basic Tools</a></li>
+<li><a href="framsetning.html#helpers-and-templates-2"><span class="toc-section-number">8.6</span> Helpers and Templates</a></li>
+<li><a href="framsetning.html#guides-2"><span class="toc-section-number">8.7</span> Guides</a></li>
+<li><a href="framsetning.html#paid-applications-and-services-2"><span class="toc-section-number">8.8</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="gagnaöflun-og-umbreyting.html#gagnaöflun-og--umbreyting"><span class="toc-section-number">9</span> Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="gagnaöflun-og-umbreyting.html#basic-tools-3"><span class="toc-section-number">9.1</span> Basic Tools</a></li>
+<li><a href="gagnaöflun-og-umbreyting.html#helpers-and-templates-3"><span class="toc-section-number">9.2</span> Helpers and Templates</a></li>
+<li><a href="gagnaöflun-og-umbreyting.html#guides-3"><span class="toc-section-number">9.3</span> Guides</a></li>
+<li><a href="gagnaöflun-og-umbreyting.html#paid-applications-and-services-3"><span class="toc-section-number">9.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#gögn-úr-ólíkum-áttum-í-eina-sæng"><span class="toc-section-number">10</span> Gögn úr ólíkum áttum í eina sæng</a>
+<ul>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#basic-tools-4"><span class="toc-section-number">10.1</span> Basic Tools</a></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#helpers-and-templates-4"><span class="toc-section-number">10.2</span> Helpers and Templates</a></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#guides-4"><span class="toc-section-number">10.3</span> Guides</a></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#paid-applications-and-services-4"><span class="toc-section-number">10.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="hvað-svo.html#hvað-svo"><span class="toc-section-number">11</span> Hvað svo?</a>
+<ul>
+<li><a href="hvað-svo.html#basic-tools-5"><span class="toc-section-number">11.1</span> Basic Tools</a></li>
+<li><a href="hvað-svo.html#helpers-and-templates-5"><span class="toc-section-number">11.2</span> Helpers and Templates</a></li>
+<li><a href="hvað-svo.html#guides-5"><span class="toc-section-number">11.3</span> Guides</a></li>
+<li><a href="hvað-svo.html#paid-applications-and-services-5"><span class="toc-section-number">11.4</span> Paid Applications and Services</a></li>
+</ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="framsetning-gagna-í-töflum-og-gröfum" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Framsetning gagna í töflum og gröfum</h1>
+<p>We write papers. Those papers cite books and articles. They often
+incorporate tables and figures created in
+<a href="http://www.r-project.org">R</a>. What we want to do is quickly turn a
+Markdown file containing things like that into a properly formatted
+scholarly paper, without giving up any of the necessary scholarly
+apparatus (on the output side) or the convenience and convertibilty of
+Markdown (on the input side). We want to easily get good-looking
+output from the same source in HTML, PDF, and DOCX formats. And we
+want to do that with an absolute minimum of—ideally,
+<em>no</em>—post-processing of the output beyond the basic conversion step.
+This is within our reach.</p>
+<div class="figure fullwidth"><span id="fig:workflowdiagram"></span>
+<img src="figures/workflow-wide.png" alt="A plain-text document toolchain." width="100%"  />
+<p class="caption marginnote shownote">
+Mynd 4.1: A plain-text document toolchain.
+</p>
+</div>
+<p>A sample document flow is shown in Figure <a href="framsetning-gagna-í-töflum-og-gröfum.html#fig:workflowdiagram">4.1</a>. I promise it
+is less insane than it appears. Describing it all at once might make
+it sound a little crazy. But, at bottom, there are just two separable
+pieces. First, <code>knitr</code> converts <code>.Rmd</code> files to <code>.md</code> files. Second,
+John MacFarlane’s superb <a href="http://pandoc.org">Pandoc</a> converts <code>.md</code>
+files to HTML, <code>.tex</code>, PDF, or Word formats. In both cases we use a
+few switches, templates and configuration files to do that nicely and
+with a minimum of fuss. You should install a standard set of Unix
+developer tools, which on OS X can conveniently be installed
+<a href="https://developer.apple.com/library/ios/technotes/tn2339/_index.html">directly from the command line</a>.<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> Here’s how. Open a terminal window and type <code>xcode-select --install</code>. You can install <code>pandoc</code> and many other tools using the <a href="http://brew.sh">Homebrew package manager</a>.</span>
+along with R, knitr, pandoc, and a
+<a href="https://tug.org/mactex/">TeX distribution</a>. Note that the default
+set-ups for <code>knitr</code> and <code>pandoc</code>—the two key pieces of the
+process—will do most of what we want with no further tweaking. What
+I will you here are just the relevant options to use and switches to
+set for these tools, together with some templates and document samples
+showing how nice-looking output can be produced in practice.</p>
+<p>I write everything in Emacs, but as I hope is clear by now, that
+doesn’t matter. Use whatever text editor you like and just learn the
+hell out of it. The
+<a href="https://github.com/kjhealy/latex-custom-kjh">custom LaTeX style files</a>
+were originally put together to let me write nice-looking <code>.tex</code> files
+directly, but now they just do their work in the background. Pandoc
+will use them when it converts things to PDF. The heavy lifting is
+done by the
+<a href="https://github.com/kjhealy/latex-custom-kjh/tree/master/needs-org-mode">org-preamble-pdflatex.sty</a>
+and
+<a href="https://github.com/kjhealy/latex-custom-kjh/tree/master/needs-memoir">memoir-article-styles</a>
+files. If you install these files where LaTeX can find them—i.e., if
+you can compile a LaTeX document
+<a href="https://github.com/kjhealy/latex-custom-kjh/blob/master/templates/basic/article.tex">based on this example</a>—then
+you are good to go. My
+<a href="https://github.com/kjhealy/socbibs">BibTeX master file</a> is also
+available, but you will probably want to use your own, changing
+references to it in the templates as appropriate. Second, we have the
+custom pandoc stuff.
+<a href="https://github.com/kjhealy/pandoc-templates">Here is the repository for that</a>.
+Much of the material there is designed to go in the <code>~/.pandoc/</code>
+directory, which is where pandoc expects to find its configuration
+files. I have also set up a sample
+<a href="https://github.com/kjhealy/md-starter"><code>md-starter</code> project</a> and an
+<a href="https://github.com/kjhealy/rmd-starter"><code>rmd-starter</code> project</a>. These
+are the skeletons of project folders for a paper written in Markdown
+(just an <code>.md</code> file, with no R) and a paper beginning life as an
+<code>.Rmd</code> file. The sample projects contain the basic starter file and a
+<code>Makefile</code> to produce <code>.html</code>, <code>.tex</code>, <code>.pdf</code> and <code>.docx</code> files.</p>
+<div class="sourceCode" id="lst:yamlheader" caption="Markdown file with document metadata"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="lst:yamlheader-1"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-1" aria-hidden="true" tabindex="-1"></a><span class="ex">---</span></span>
+<span id="lst:yamlheader-2"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-2" aria-hidden="true" tabindex="-1"></a><span class="ex">title:</span> <span class="st">&quot;A Pandoc Markdown Article Starter&quot;</span></span>
+<span id="lst:yamlheader-3"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-3" aria-hidden="true" tabindex="-1"></a><span class="ex">author:</span></span>
+<span id="lst:yamlheader-4"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> name: Kieran Healy</span>
+<span id="lst:yamlheader-5"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">affiliation:</span> Duke University</span>
+<span id="lst:yamlheader-6"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">email:</span> kjhealy@soc.duke.edu</span>
+<span id="lst:yamlheader-7"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-7" aria-hidden="true" tabindex="-1"></a><span class="ex">-</span> name: Joe Bloggs</span>
+<span id="lst:yamlheader-8"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-8" aria-hidden="true" tabindex="-1"></a>  <span class="ex">affiliation:</span> University of North Carolina, Chapel Hill</span>
+<span id="lst:yamlheader-9"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">email:</span> joebloggs@unc.edu</span>
+<span id="lst:yamlheader-10"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-10" aria-hidden="true" tabindex="-1"></a><span class="ex">date:</span> January 2014</span>
+<span id="lst:yamlheader-11"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-11" aria-hidden="true" tabindex="-1"></a><span class="ex">abstract:</span> <span class="st">&quot;Lorem ipsum dolor sit amet.&quot;</span></span>
+<span id="lst:yamlheader-12"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-12" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="lst:yamlheader-13"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:yamlheader-14"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Introduction</span></span>
+<span id="lst:yamlheader-15"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-15" aria-hidden="true" tabindex="-1"></a><span class="ex">Lorem</span> ipsum dolor sit amet, consectetur adipisicing elit, </span>
+<span id="lst:yamlheader-16"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-16" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> do eiusmod tempor incididunt ut labore et dolore magna </span>
+<span id="lst:yamlheader-17"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-17" aria-hidden="true" tabindex="-1"></a><span class="ex">aliqua</span> [fourcade13classsituat]. Notice that citation.</span>
+<span id="lst:yamlheader-18"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:yamlheader-19"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Theory</span></span>
+<span id="lst:yamlheader-20"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-20" aria-hidden="true" tabindex="-1"></a><span class="ex">Lorem</span> ipsum dolor sit amet, consectetur adipisicing </span>
+<span id="lst:yamlheader-21"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-21" aria-hidden="true" tabindex="-1"></a><span class="ex">elit,</span> sed do eiusmod tempor incididunt ut labore et </span>
+<span id="lst:yamlheader-22"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:yamlheader-22" aria-hidden="true" tabindex="-1"></a><span class="ex">dolore</span> magna aliqua [fourcade13classsituat].</span></code></pre></div>
+<p>Let’s start with a straightforward markdown file—no R code yet, so
+nothing to the left of <code>article.md</code> line in Figure
+<a href="framsetning-gagna-í-töflum-og-gröfum.html#fig:workflowdiagram">4.1</a>. The start of the sample
+<code>article-markdown.md</code> file is shown in lst:yamlheader. The bit at the
+top is metadata, which pandoc understands. The HTML and LaTeX
+templates
+<a href="https://github.com/kjhealy/pandoc-templates/tree/master/templates">in the pandoc-templates repository</a> are
+set up to use this metadata properly.</p>
+<p>For scholarly work, efficient management of citations is particularly
+important. The <code>pandoc-citeproc</code> filter is an add-on that handles
+these. It can be installed alongside <code>pandoc</code>. Your bibliography can
+be stored in one of a variety of formats (such as BibTeX, or EndNote).
+Within your <code>.md</code> document, cites are referred to by their key, such
+as <code>[healy14datavisualsociol]</code>. When <code>pandoc</code> converts your document,
+the cite key is replaced with the reference information, like this
+[healy14datavisualsociol], and the full bibliographic entry is
+included in an automaticaly-generated list of references.
+Read
+<a href="http://pandoc.org/README.html#citations">Pandoc’s documentation for more details</a> about
+citations. Pandoc can also handle in-text labels and cross-references.
+A filter
+named
+<a href="https://github.com/lierdakil/pandoc-crossref"><code>pandoc-crossref</code></a>
+extends the extends the <code>@label</code> convention to deal to things like
+figures, tables, equations, theorems, code listings and so on.</p>
+<p>There is more than one way to have pandoc manage
+citations, but here we just use the most self-contained route. Simple
+documents can be contained in a single <code>.md</code> file. Documents including
+data analysis start life as <code>.Rmd</code> files which are then knitted into
+<code>.md</code> files and converted to PDF or HTML. At its simplest, a
+<code>mypaper.md</code> document can be converted to <code>mypaper.pdf</code> file by
+opening a terminal window and typing a command like the one in
+lst:pandocsimple.</p>
+<div class="sourceCode" id="lst:pandocsimple" caption="The simplest way to convert a Markdown file to PDF with pandoc"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="lst:pandocsimple-1"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:pandocsimple-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> mypaper.md <span class="at">-o</span> mypaper.pdf</span></code></pre></div>
+<div id="automation-with-make" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Automation with <code>make</code></h2>
+<p>Because we will probably run commands like this a lot, it’s convenient to automate them a little bit, and to add some extra bells and whistles to accommodate things we will routinely add to files, such as author information and other metadata, together with the ability to process bibliographic information and cross-references. These are handled by <code>pandoc</code> by turning on various switches in the command, and by ensuring a couple of external “filters” are present to manage the bibliographies and cross-references. Rather than type long commands out repeatedly, we will automate the process. This kind of automation is especially useful when our final output file might have a number of prerequisites before it can be properly produced, and we would like the computer to be a little bit smart about what needs to be re-processed and under what conditions. That way, for example, if a Figure has not changed we will not re-run the (possibly time-consuming) R script to create it again, unless we have to.</p>
+<p>We manage this process using a tool called
+<a href="https://www.gnu.org/software/make/"><code>make</code></a>. Inside our project
+folder we put a plain-text <code>Makefile</code> that contains some rules
+governing how to produce a <em>target</em> file that might have a number of
+<em>prerequisites</em>. In this case, a PDF or HTML file is the target, and
+the various figures and data tables are the prerequisites—if the
+code that produces the prerequisites changes, the final document will
+change too. <code>Make</code> starts from the final document and works backwards
+along the chain of prerequisites, re-compiling or re-creating them as
+needed. It’s a powerful tool. For a good basic introduction, take a
+look at Karl Broman’s
+“<a href="http://kbroman.org/minimal_make/">Minimal Make</a>”. (Incidentally,
+Karl Broman has
+<a href="http://kbroman.org/pages/tutorials">a number of tutorials and guides</a>
+providing accurate and concise tours of many of the tools and topics
+described here, including
+<a href="http://kbroman.org/steps2rr">getting started with reproducible research</a>,
+<a href="http://kbroman.org/github_tutorial">using git and GitHub</a>, and
+<a href="http://kbroman.org/knitr_knutshell">working with knitr</a>.)</p>
+<p>Following Karl Broman’s example, let’s imagine that you have a paper,
+<code>paper.md</code> written in Markdown, that incorporates references to a
+figure, <code>fig1.pdf</code> generated by an R script, <code>fig1.r</code>. You could of
+course have an <code>.Rmd</code> file that produces the output, but there are
+situations where that isn’t ideal. The end-point or target is the full
+article in PDF form. When the text of the paper changes in <code>paper.md</code>,
+then <code>paper.pdf</code> will have to be re-created. In the same way, when we
+change the content of <code>fig1.r</code> then <code>fig1.pdf</code> will need to be
+updated, and thus also <code>paper.pdf</code> will need to be re-created as well.
+Using <code>make</code> we can take care of the process.</p>
+<p>Here is what a basic <code>Makefile</code> for our example would look like:</p>
+<div class="sourceCode" id="lst:makesimple" caption="A simple Makefile"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="lst:makesimple-1"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makesimple-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makesimple-2"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makesimple-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Read as &quot;mypaper.pdf depends on mypaper.md and fig1.pdf&quot;</span></span>
+<span id="lst:makesimple-3"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makesimple-3" aria-hidden="true" tabindex="-1"></a><span class="ex">mypaper.pdf:</span> mypaper.md fig1.pdf </span>
+<span id="lst:makesimple-4"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makesimple-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pandoc</span> mypaper.md <span class="at">-o</span> mypaper.pdf</span>
+<span id="lst:makesimple-5"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makesimple-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makesimple-6"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makesimple-6" aria-hidden="true" tabindex="-1"></a><span class="co">## Read as &quot;fig1.pdf depends on fig1.r&quot;</span></span>
+<span id="lst:makesimple-7"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makesimple-7" aria-hidden="true" tabindex="-1"></a><span class="ex">fig1.pdf:</span> fig1.r</span>
+<span id="lst:makesimple-8"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makesimple-8" aria-hidden="true" tabindex="-1"></a>    <span class="ex">R</span> CMD BATCH fig1.r</span></code></pre></div>
+<p>The big gotcha for <code>Makefiles</code> is that for no good reason they use the
+tab key rather than spaces to indent the commands associated with
+rules. If you use spaces, <code>make</code> will not work. With the <code>Makefile</code> in
+lst:makesimple, typing <code>make</code> at the command line will have make
+check the state of the final target (<code>makefile.pdf</code>) and all its
+dependencies. If the target isn’t present, <code>make</code> will create it in
+accordance with the rules specified. If the target <em>is</em> present,
+<code>make</code> will check to see if any of its prerequisites have changed
+since it was last created. If so, it will recreate the file. The chain
+of prerequisites propagates backwards, so that if you change <code>fig1.r</code>,
+then <code>make</code> will notice and re-run it to create <code>fig1.pdf</code> before
+running the commands in the rule to create <code>mypaper.pdf</code>. You can also
+choose to just invoke single rules from the makefile, e.g. by typing
+<code>make fig1.pdf</code> instead of <code>make</code> at the command line. This will
+evaluate just the <code>fig1.pdf</code> rule and any associated prerequisites.</p>
+<p>For a simple example like this, make is mostly a minor convenience,
+saving you the trouble of typing a sequence of commands over and over
+to create your paper. However, it becomes very useful once you have
+projects with many documents and dependencies—for example, a
+dissertation consisting of separate chapters, each of which contains
+figures and tables, which in turn depend on various R scripts to set
+up and clean data. In those cases, <code>make</code> becomes a very powerful and
+helpful way of ensuring your final output really is up to date.</p>
+<p>To deal with more complex projects and chains of prerequisites, <code>make</code>
+can make use of a number of variables to save you from (for example)
+typing out the name of every <code>figure-x.pdf</code> in your directory.</p>
+<p>The <code>Makefile</code> in the sample
+<a href="https://github.com/kjhealy/md-starter"><code>md-starter</code> project</a> will
+convert any markdown files in the working directory to HTML, <code>.tex</code>,
+<code>.pdf</code>, or <code>.docx</code> files as requested. Typing <code>make html</code> at the
+command line will produce <code>.html</code> files from any <code>.md</code> files in the
+directory, for example. The PDF output (from <code>make pdf</code>) will look
+like <a href="http://kieranhealy.org/files/papers/plain-person-text.pdf">this article</a>, more or less. The different pieces of the
+<code>Makefile</code> define a few variables that specify the relationship
+between the different file types. In essence the rules say, for
+example, that all the PDF files in the directory depend on changes to
+an <code>.md</code> file with the same name; that the same is true of the HTML
+files in the directory, and so on. Then the show the <code>pandoc</code> commands
+that generate the output files from the markdown input. The Makefile
+itself is shown in Listing lst:makefile makes use of a few variables as
+shorthand, as well as special variables like <code>$@</code> and <code>$&lt;</code>, which mean
+“the name of the current target” and “the name of the current
+prerequisite”, respectively.</p>
+<div class="sourceCode" id="lst:makefile" caption="A more complicated Makefile"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="lst:makefile-1"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-1" aria-hidden="true" tabindex="-1"></a><span class="co">## What extension (e.g. md, markdown, mdown) is being used </span></span>
+<span id="lst:makefile-2"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-2" aria-hidden="true" tabindex="-1"></a><span class="co">## for markdown files MEXT = md</span></span>
+<span id="lst:makefile-3"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-4"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Expands to a list of all markdown files in the working directory</span></span>
+<span id="lst:makefile-5"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-5" aria-hidden="true" tabindex="-1"></a><span class="ex">SRC</span> = <span class="va">$(</span><span class="ex">wildcard</span> <span class="pp">*</span>.<span class="va">$(</span><span class="ex">MEXT</span><span class="va">))</span></span>
+<span id="lst:makefile-6"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-7"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-7" aria-hidden="true" tabindex="-1"></a><span class="co">## Location of Pandoc support files.</span></span>
+<span id="lst:makefile-8"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-8" aria-hidden="true" tabindex="-1"></a><span class="ex">PREFIX</span> = /Users/kjhealy/.pandoc</span>
+<span id="lst:makefile-9"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-10"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-10" aria-hidden="true" tabindex="-1"></a><span class="co">## Location of your working bibliography file</span></span>
+<span id="lst:makefile-11"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-11" aria-hidden="true" tabindex="-1"></a><span class="ex">BIB</span> = /Users/kjhealy/Documents/bibs/socbib-pandoc.bib</span>
+<span id="lst:makefile-12"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-13"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-13" aria-hidden="true" tabindex="-1"></a><span class="co">## CSL stylesheet (located in the csl folder of the PREFIX directory).</span></span>
+<span id="lst:makefile-14"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-14" aria-hidden="true" tabindex="-1"></a><span class="ex">CSL</span> = apsa</span>
+<span id="lst:makefile-15"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-16"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-16" aria-hidden="true" tabindex="-1"></a><span class="co">## x.pdf depends on x.md, x.html depends on x.md, etc</span></span>
+<span id="lst:makefile-17"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-17" aria-hidden="true" tabindex="-1"></a><span class="va">PDFS=$(</span><span class="ex">SRC:.md=.pdf</span><span class="va">)</span></span>
+<span id="lst:makefile-18"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-18" aria-hidden="true" tabindex="-1"></a><span class="va">HTML=$(</span><span class="ex">SRC:.md=.html</span><span class="va">)</span></span>
+<span id="lst:makefile-19"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-19" aria-hidden="true" tabindex="-1"></a><span class="va">TEX=$(</span><span class="ex">SRC:.md=.tex</span><span class="va">)</span></span>
+<span id="lst:makefile-20"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-20" aria-hidden="true" tabindex="-1"></a><span class="va">DOCX=$(</span><span class="ex">SRC:.md=.docx</span><span class="va">)</span></span>
+<span id="lst:makefile-21"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-22"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-22" aria-hidden="true" tabindex="-1"></a><span class="co">## Rules -- make all, make pdf, make html. The `clean` rule is below.</span></span>
+<span id="lst:makefile-23"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-23" aria-hidden="true" tabindex="-1"></a><span class="ex">all:</span>    <span class="va">$(</span><span class="ex">PDFS</span><span class="va">)</span> <span class="va">$(</span><span class="ex">HTML</span><span class="va">)</span> <span class="va">$(</span><span class="ex">TEX</span><span class="va">)</span> <span class="va">$(</span><span class="ex">DOCX</span><span class="va">)</span></span>
+<span id="lst:makefile-24"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-24" aria-hidden="true" tabindex="-1"></a><span class="ex">pdf:</span>    clean <span class="va">$(</span><span class="ex">PDFS</span><span class="va">)</span></span>
+<span id="lst:makefile-25"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-25" aria-hidden="true" tabindex="-1"></a><span class="ex">html:</span>   clean <span class="va">$(</span><span class="ex">HTML</span><span class="va">)</span></span>
+<span id="lst:makefile-26"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-26" aria-hidden="true" tabindex="-1"></a><span class="ex">tex:</span>    clean <span class="va">$(</span><span class="ex">TEX</span><span class="va">)</span></span>
+<span id="lst:makefile-27"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-27" aria-hidden="true" tabindex="-1"></a><span class="ex">docx:</span>   clean <span class="va">$(</span><span class="ex">DOCX</span><span class="va">)</span></span>
+<span id="lst:makefile-28"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-29"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-29" aria-hidden="true" tabindex="-1"></a><span class="co">## The commands associated with each rule. The first one is run with </span></span>
+<span id="lst:makefile-30"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-30" aria-hidden="true" tabindex="-1"></a><span class="co">## make html. </span></span>
+<span id="lst:makefile-31"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-31" aria-hidden="true" tabindex="-1"></a><span class="ex">%.html:</span> %.md</span>
+<span id="lst:makefile-32"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-32" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pandoc</span> <span class="at">-r</span> markdown+simple_tables+table_captions+yaml_metadata_block <span class="dt">\ </span></span>
+<span id="lst:makefile-33"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-33" aria-hidden="true" tabindex="-1"></a>    <span class="ex">-w</span> html <span class="at">-S</span> <span class="at">--template</span><span class="op">=</span><span class="va">$(</span><span class="ex">PREFIX</span><span class="va">)</span>/templates/html.template <span class="dt">\</span></span>
+<span id="lst:makefile-34"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">--css</span><span class="op">=</span><span class="va">$(</span><span class="ex">PREFIX</span><span class="va">)</span>/marked/kultiad-serif.css <span class="at">--filter</span> pandoc-crossref <span class="dt">\ </span>    </span>
+<span id="lst:makefile-35"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-35" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--filter</span> pandoc-citeproc <span class="at">--csl</span><span class="op">=</span><span class="va">$(</span><span class="ex">PREFIX</span><span class="va">)</span>/csl/<span class="va">$(</span><span class="ex">CSL</span><span class="va">)</span>.csl <span class="dt">\ </span></span>
+<span id="lst:makefile-36"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-36" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--bibliography=</span><span class="va">$(</span><span class="ex">BIB</span><span class="va">)</span> <span class="at">-o</span> <span class="va">$@</span> $<span class="op">&lt;</span></span>
+<span id="lst:makefile-37"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-38"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-38" aria-hidden="true" tabindex="-1"></a><span class="co">## Same goes for the other file types. </span></span>
+<span id="lst:makefile-39"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-39" aria-hidden="true" tabindex="-1"></a><span class="co">## Watch out for the TAB before &#39;pandoc&#39;</span></span>
+<span id="lst:makefile-40"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-40" aria-hidden="true" tabindex="-1"></a><span class="ex">%.tex:</span>  %.md</span>
+<span id="lst:makefile-41"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-41" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pandoc</span> <span class="at">-r</span> markdown+simple_tables+table_captions+yaml_metadata_block <span class="dt">\ </span></span>
+<span id="lst:makefile-42"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-42" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--listings</span> <span class="at">-w</span> latex <span class="at">-s</span> <span class="at">-S</span> <span class="at">--latex-engine</span><span class="op">=</span>pdflatex <span class="dt">\ </span></span>
+<span id="lst:makefile-43"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-43" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--template=</span><span class="va">$(</span><span class="ex">PREFIX</span><span class="va">)</span><span class="ex">/templates/latex.template</span> <span class="dt">\ </span></span>
+<span id="lst:makefile-44"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-44" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--filter</span> pandoc-crossref <span class="at">--filter</span> pandoc-citeproc <span class="dt">\ </span></span>
+<span id="lst:makefile-45"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-45" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--csl=</span><span class="va">$(</span><span class="ex">PREFIX</span><span class="va">)</span><span class="ex">/csl/ajps.csl</span> <span class="at">--filter</span> pandoc-citeproc-preamble <span class="dt">\ </span></span>
+<span id="lst:makefile-46"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-46" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--bibliography=</span><span class="va">$(</span><span class="ex">BIB</span><span class="va">)</span> <span class="at">-o</span> <span class="va">$@</span> $<span class="op">&lt;</span></span>
+<span id="lst:makefile-47"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-48"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-48" aria-hidden="true" tabindex="-1"></a><span class="ex">%.pdf:</span>  %.md</span>
+<span id="lst:makefile-49"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-49" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pandoc</span> <span class="at">-r</span> markdown+simple_tables+table_captions+yaml_metadata_block <span class="dt">\ </span></span>
+<span id="lst:makefile-50"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-50" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--listings</span> <span class="at">-s</span> <span class="at">-S</span> <span class="at">--latex-engine</span><span class="op">=</span>pdflatex <span class="dt">\ </span></span>
+<span id="lst:makefile-51"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-51" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--template=</span><span class="va">$(</span><span class="ex">PREFIX</span><span class="va">)</span><span class="ex">/templates/latex.template</span> <span class="dt">\ </span></span>
+<span id="lst:makefile-52"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-52" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--filter</span> pandoc-crossref <span class="at">--filter</span> pandoc-citeproc <span class="dt">\ </span></span>
+<span id="lst:makefile-53"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-53" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--csl=</span><span class="va">$(</span><span class="ex">PREFIX</span><span class="va">)</span><span class="ex">/csl/</span><span class="va">$(</span><span class="ex">CSL</span><span class="va">)</span><span class="ex">.csl</span> <span class="at">--filter</span> pandoc-citeproc-preamble <span class="dt">\ </span></span>
+<span id="lst:makefile-54"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-54" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--bibliography=</span><span class="va">$(</span><span class="ex">BIB</span><span class="va">)</span> <span class="at">-o</span> <span class="va">$@</span> $<span class="op">&lt;</span></span>
+<span id="lst:makefile-55"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-56"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-56" aria-hidden="true" tabindex="-1"></a><span class="ex">%.docx:</span> %.md</span>
+<span id="lst:makefile-57"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-57" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pandoc</span> <span class="at">-r</span> markdown+simple_tables+table_captions+yaml_metadata_block <span class="dt">\ </span></span>
+<span id="lst:makefile-58"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-58" aria-hidden="true" tabindex="-1"></a>    <span class="ex">-s</span> <span class="at">-S</span> <span class="at">--filter</span> pandoc-crossref <span class="at">--csl</span><span class="op">=</span><span class="va">$(</span><span class="ex">PREFIX</span><span class="va">)</span>/csl/<span class="va">$(</span><span class="ex">CSL</span><span class="va">)</span>.csl <span class="dt">\ </span></span>
+<span id="lst:makefile-59"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-59" aria-hidden="true" tabindex="-1"></a>    <span class="ex">--bibliography=</span><span class="va">$(</span><span class="ex">BIB</span><span class="va">)</span> <span class="at">-o</span> <span class="va">$@</span> $<span class="op">&lt;</span></span>
+<span id="lst:makefile-60"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-61"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-61" aria-hidden="true" tabindex="-1"></a><span class="ex">clean:</span></span>
+<span id="lst:makefile-62"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-62" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rm</span> <span class="at">-f</span> <span class="pp">*</span>.html <span class="pp">*</span>.pdf <span class="pp">*</span>.tex <span class="pp">*</span>.aux <span class="pp">*</span>.log <span class="pp">*</span>.docx</span>
+<span id="lst:makefile-63"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst:makefile-64"><a href="framsetning-gagna-í-töflum-og-gröfum.html#lst:makefile-64" aria-hidden="true" tabindex="-1"></a><span class="ex">.PHONY:</span> clean</span></code></pre></div>
+<p>Note that the <code>pandoc</code> commands are interpreted single lines of text,
+not several lines separated by the <code>return</code> key. But you can use the
+<code>\</code> symbol to tell <code>make</code> to continue to the next line without a
+break. With this Makefile, typing <code>make pdf</code> would take all the <code>.md</code>
+files in the directory one at a time and run the pandoc command to
+turn each one into a PDF, using the
+<a href="https://www.apsanet.org/utils/journal.cfm?Journal=APSR">APSR</a>
+reference style, my latex template, and a <code>.bib</code> file called
+<code>socbib-pandoc.bib</code>.</p>
+<p>You shouldn’t use this <code>Makefile</code> blindly. Take the time to learn how
+<code>make</code> works and how it can help your project. The
+<a href="https://www.gnu.org/software/make/manual/">official manual</a> is pretty
+clear. Make’s backward-looking chain of prerequisites can make it
+tricky to write rules for complex projects. When writing or inspecting
+a <code>Makefile</code> and its specific rules, it can be helpful to use the
+<code>--dry-run</code> switch, as in <code>make --dry-run</code>. This will print out the
+sequence of commands <code>make</code> would run, but without actually executing
+them. You can try this with the <code>Makefile</code> in lst:makefile in a
+directory with at least one <code>.md</code> file in it. For example, look at the
+commands produced by <code>make pdf --dry-run</code> or <code>make docx --dry-run</code> or
+<code>make clean --dry-run</code>.</p>
+<p>The particular steps needed for many projects may be quite simple, and
+not require the use of any variables or other frills. If you find
+yourself repeatedly running the same sequence of commands to assemble
+a document (e.g. cleaning data; running preliminary code; producing
+figures; assembling a final document) then <code>make</code> can do a lot to
+automate the process. For further examples of <code>Makefiles</code> doing things relevant to data analysis, see <a href="http://lincolnmullen.com/blog/makefiles-for-ocr-and-converting-shapefiles">Lincoln Mullen’s discussion</a> of the things he uses <code>make</code> to manage.</p>
+<p>The examples directory
+<a href="https://github.com/kjhealy/pandoc-templates/blob/master/examples/article-knitr.Rmd">includes</a>
+a sample <code>.Rmd</code> file. The code chunks in the file provide examples of
+how to generate tables and figures in the document. In particular they
+show some useful options that can be passed to knitr.
+<a href="http://yihui.name/knitr/">Consult the <code>knitr</code> project page</a> for
+extensive documentation and many more examples. To produce output from
+the <code>article-knitr.Rmd</code> file, you could of course launch R in the
+working directory, load <code>knitr</code>, and process the file. This produces
+the <code>article-knitr.md</code> file, together with some graphics in the
+<code>figures/</code> folder (and some working files in the <code>cache/</code> folder). We
+set things up in the <code>.Rmd</code> file so that <code>knitr</code> produces both PNG and
+PDF versions of whatever figures are generated by R. That prepares the
+way for easy conversion to HTML and LaTeX. Once the <code>article-knitr.md</code>
+file is produced, HTML, <code>.tex</code>, and PDF versions of it can be produced
+as before, by typing <code>make</code> at the command line. But of course there’s
+no reason <code>make</code> can’t automate that first step, too. The
+<a href="http://github.com/kjhealy/rmd-starter"><code>rmd-starter</code> project</a> has a
+sample <code>Makefile</code> that begins with the <code>.Rmd</code> files in the directory
+and produces the outputs from there.</p>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html"><button class="btn btn-default">Previous</button></a>
+<a href="r-og-fyrsta-grafið.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/tablesaw-stackonly.js"></script>
+<script src="js/nudge.min.js"></script>
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

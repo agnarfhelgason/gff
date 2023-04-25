@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="10 Hvað svo? | _main.utf8" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+
+
+
+<meta name="description" content="10 Hvað svo? | _main.utf8">
+
+<title>10 Hvað svo? | _main.utf8</title>
+
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/envisioned.css" rel="stylesheet" />
+<script src="https://use.typekit.net/ajy6rnl.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+<!-- <link rel="stylesheet" href="css/envisioned.css"/> -->
+<link rel="stylesheet" href="css/tablesaw-stackonly.css"/>
+<link rel="stylesheet" href="css/nudge.css"/>
+<link rel="stylesheet" href="css/sourcesans.css"/>
+
+
+
+
+
+<link rel="stylesheet" href="afh.css" type="text/css" />
+
+
+</head>
+
+<body>
+
+<!--bookdown:toc:start-->
+
+<nav class="pushy pushy-left" id="TOC">
+<ul>
+<li><a href="#inngangur"><span class="toc-section-number">1</span> Inngangur</a>
+<ul>
+<li><a href="#markmið"><span class="toc-section-number">1.1</span> Markmið</a></li>
+<li><a href="#fyrir-hverja-er-þessi-bók"><span class="toc-section-number">1.2</span> Fyrir hverja er þessi bók?</a></li>
+<li><a href="#verkfæri"><span class="toc-section-number">1.3</span> Verkfæri</a>
+<ul>
+<li><a href="#google-sheets"><span class="toc-section-number">1.3.1</span> Google Sheets</a></li>
+<li><a href="#r"><span class="toc-section-number">1.3.2</span> R</a></li>
+</ul></li>
+<li><a href="#þakkir"><span class="toc-section-number">1.4</span> Þakkir</a></li>
+</ul></li>
+<li><a href="#part-talnagögn">(PART) Talnagögn</a>
+<ul>
+<li><a href="#make-sure-you-know-what-you-did"><span class="toc-section-number">1.5</span> Make Sure You Know What You Did</a></li>
+<li><a href="#use-version-control"><span class="toc-section-number">1.6</span> Use Version Control</a></li>
+<li><a href="#back-up-your-work"><span class="toc-section-number">1.7</span> Back Up Your Work</a></li>
+</ul></li>
+<li><a href="#lýsandi-tölfræði-fyrir-stakar-breytur"><span class="toc-section-number">2</span> Lýsandi tölfræði fyrir stakar breytur</a>
+<ul>
+<li><a href="#use-a-text-editor"><span class="toc-section-number">2.1</span> Use a Text Editor</a></li>
+<li><a href="#use-markdown"><span class="toc-section-number">2.2</span> Use Markdown</a></li>
+<li><a href="#use-r-with-ess-or-rstudio"><span class="toc-section-number">2.3</span> Use R with ESS or RStudio</a></li>
+</ul></li>
+<li><a href="#samanburður-á-milli-hópa-með-lýsandi-tölfræði"><span class="toc-section-number">3</span> Samanburður á milli hópa með lýsandi tölfræði</a>
+<ul>
+<li><a href="#minimize-error"><span class="toc-section-number">3.1</span> Minimize Error</a></li>
+<li><a href="#from-server-farm-to-data-table"><span class="toc-section-number">3.2</span> From Server Farm to Data Table</a></li>
+<li><a href="#use-rmarkdown-and-knitr"><span class="toc-section-number">3.3</span> Use RMarkdown and <code>knitr</code></a></li>
+</ul></li>
+<li><a href="#part-töflur-og-gröf">(PART) Töflur og gröf</a>
+<ul>
+<li><a href="#automation-with-make"><span class="toc-section-number">3.4</span> Automation with <code>make</code></a></li>
+</ul></li>
+<li><a href="#r-og-fyrsta-grafið"><span class="toc-section-number">4</span> R og fyrsta grafið</a>
+<ul>
+<li><a href="#installation-instructions-mac-os-x"><span class="toc-section-number">4.1</span> Installation Instructions (Mac OS X)</a>
+<ul>
+<li><a href="#before-you-begin"><span class="toc-section-number">4.1.1</span> Before you Begin</a></li>
+<li><a href="#getting-the-starter-kit"><span class="toc-section-number">4.1.2</span> Getting the Starter Kit</a></li>
+<li><a href="#prerequisites"><span class="toc-section-number">4.1.3</span> Prerequisites</a></li>
+<li><a href="#setup"><span class="toc-section-number">4.1.4</span> Setup</a></li>
+</ul></li>
+<li><a href="#using-marked"><span class="toc-section-number">4.2</span> Using Marked</a></li>
+</ul></li>
+<li><a href="#veldu-graf-sem-hentar-gögnunum"><span class="toc-section-number">5</span> Veldu graf sem hentar gögnunum</a>
+<ul>
+<li><a href="#why-bother-again"><span class="toc-section-number">5.1</span> Why Bother, Again?</a></li>
+<li><a href="#but-alternatives-might-be-better-for-you"><span class="toc-section-number">5.2</span> But Alternatives Might Be Better for You</a></li>
+<li><a href="#a-broader-perspective"><span class="toc-section-number">5.3</span> A Broader Perspective</a></li>
+</ul></li>
+<li><a href="#gröf-fyrir-fjölbreytt-gögn"><span class="toc-section-number">6</span> Gröf fyrir fjölbreytt gögn</a>
+<ul>
+<li><a href="#basic-tools"><span class="toc-section-number">6.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates"><span class="toc-section-number">6.2</span> Helpers and Templates</a></li>
+<li><a href="#guides"><span class="toc-section-number">6.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services"><span class="toc-section-number">6.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#framsetning"><span class="toc-section-number">7</span> Framsetning</a>
+<ul>
+<li><a href="#basic-tools-1"><span class="toc-section-number">7.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-1"><span class="toc-section-number">7.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-1"><span class="toc-section-number">7.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-1"><span class="toc-section-number">7.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#part-gagnaöflun-og--umbreyting">(PART) Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="#basic-tools-2"><span class="toc-section-number">7.5</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-2"><span class="toc-section-number">7.6</span> Helpers and Templates</a></li>
+<li><a href="#guides-2"><span class="toc-section-number">7.7</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-2"><span class="toc-section-number">7.8</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#gagnaöflun-og--umbreyting"><span class="toc-section-number">8</span> Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="#basic-tools-3"><span class="toc-section-number">8.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-3"><span class="toc-section-number">8.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-3"><span class="toc-section-number">8.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-3"><span class="toc-section-number">8.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#gögn-úr-ólíkum-áttum-í-eina-sæng"><span class="toc-section-number">9</span> Gögn úr ólíkum áttum í eina sæng</a>
+<ul>
+<li><a href="#basic-tools-4"><span class="toc-section-number">9.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-4"><span class="toc-section-number">9.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-4"><span class="toc-section-number">9.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-4"><span class="toc-section-number">9.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#hvað-svo"><span class="toc-section-number">10</span> Hvað svo?</a>
+<ul>
+<li><a href="#basic-tools-5"><span class="toc-section-number">10.1</span> Basic Tools</a></li>
+<li><a href="#helpers-and-templates-5"><span class="toc-section-number">10.2</span> Helpers and Templates</a></li>
+<li><a href="#guides-5"><span class="toc-section-number">10.3</span> Guides</a></li>
+<li><a href="#paid-applications-and-services-5"><span class="toc-section-number">10.4</span> Paid Applications and Services</a></li>
+</ul></li>
+</ul>
+</nav>
+
+<!--bookdown:toc:end-->
+
+<div class="menu-btn"><h3>☰ Kaflar</h3></div>
+
+<div class="site-overlay"></div>
+
+
+<div class="row">
+<div class="col-sm-12">
+
+<nav class="pushy pushy-left" id="TOC">
+<ul>
+<li><a href="index.html#inngangur"><span class="toc-section-number">1</span> Inngangur</a>
+<ul>
+<li><a href="index.html#markmið"><span class="toc-section-number">1.1</span> Markmið</a></li>
+<li><a href="index.html#fyrir-hverja-er-þessi-bók"><span class="toc-section-number">1.2</span> Fyrir hverja er þessi bók?</a></li>
+<li><a href="index.html#verkfæri"><span class="toc-section-number">1.3</span> Verkfæri</a>
+<ul>
+<li><a href="index.html#google-sheets"><span class="toc-section-number">1.3.1</span> Google Sheets</a></li>
+<li><a href="index.html#r"><span class="toc-section-number">1.3.2</span> R</a></li>
+</ul></li>
+<li><a href="index.html#þakkir"><span class="toc-section-number">1.4</span> Þakkir</a></li>
+</ul></li>
+<li><a href="#part-talnagögn">(PART) Talnagögn</a>
+<ul>
+<li><a href="index.html#make-sure-you-know-what-you-did"><span class="toc-section-number">1.5</span> Make Sure You Know What You Did</a></li>
+<li><a href="index.html#use-version-control"><span class="toc-section-number">1.6</span> Use Version Control</a></li>
+<li><a href="index.html#back-up-your-work"><span class="toc-section-number">1.7</span> Back Up Your Work</a></li>
+</ul></li>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#lýsandi-tölfræði-fyrir-stakar-breytur"><span class="toc-section-number">2</span> Lýsandi tölfræði fyrir stakar breytur</a>
+<ul>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#use-a-text-editor"><span class="toc-section-number">2.1</span> Use a Text Editor</a></li>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#use-markdown"><span class="toc-section-number">2.2</span> Use Markdown</a></li>
+<li><a href="lýsandi-tölfræði-fyrir-stakar-breytur.html#use-r-with-ess-or-rstudio"><span class="toc-section-number">2.3</span> Use R with ESS or RStudio</a></li>
+</ul></li>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#samanburður-á-milli-hópa-með-lýsandi-tölfræði"><span class="toc-section-number">3</span> Samanburður á milli hópa með lýsandi tölfræði</a>
+<ul>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#minimize-error"><span class="toc-section-number">3.1</span> Minimize Error</a></li>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#from-server-farm-to-data-table"><span class="toc-section-number">3.2</span> From Server Farm to Data Table</a></li>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#use-rmarkdown-and-knitr"><span class="toc-section-number">3.3</span> Use RMarkdown and <code>knitr</code></a></li>
+</ul></li>
+<li><a href="#part-töflur-og-gröf">(PART) Töflur og gröf</a>
+<ul>
+<li><a href="samanburður-á-milli-hópa-með-lýsandi-tölfræði.html#automation-with-make"><span class="toc-section-number">3.4</span> Automation with <code>make</code></a></li>
+</ul></li>
+<li><a href="r-og-fyrsta-grafið.html#r-og-fyrsta-grafið"><span class="toc-section-number">4</span> R og fyrsta grafið</a>
+<ul>
+<li><a href="r-og-fyrsta-grafið.html#installation-instructions-mac-os-x"><span class="toc-section-number">4.1</span> Installation Instructions (Mac OS X)</a>
+<ul>
+<li><a href="r-og-fyrsta-grafið.html#before-you-begin"><span class="toc-section-number">4.1.1</span> Before you Begin</a></li>
+<li><a href="r-og-fyrsta-grafið.html#getting-the-starter-kit"><span class="toc-section-number">4.1.2</span> Getting the Starter Kit</a></li>
+<li><a href="r-og-fyrsta-grafið.html#prerequisites"><span class="toc-section-number">4.1.3</span> Prerequisites</a></li>
+<li><a href="r-og-fyrsta-grafið.html#setup"><span class="toc-section-number">4.1.4</span> Setup</a></li>
+</ul></li>
+<li><a href="r-og-fyrsta-grafið.html#using-marked"><span class="toc-section-number">4.2</span> Using Marked</a></li>
+</ul></li>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#veldu-graf-sem-hentar-gögnunum"><span class="toc-section-number">5</span> Veldu graf sem hentar gögnunum</a>
+<ul>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#why-bother-again"><span class="toc-section-number">5.1</span> Why Bother, Again?</a></li>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#but-alternatives-might-be-better-for-you"><span class="toc-section-number">5.2</span> But Alternatives Might Be Better for You</a></li>
+<li><a href="veldu-graf-sem-hentar-gögnunum.html#a-broader-perspective"><span class="toc-section-number">5.3</span> A Broader Perspective</a></li>
+</ul></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#gröf-fyrir-fjölbreytt-gögn"><span class="toc-section-number">6</span> Gröf fyrir fjölbreytt gögn</a>
+<ul>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#basic-tools"><span class="toc-section-number">6.1</span> Basic Tools</a></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#helpers-and-templates"><span class="toc-section-number">6.2</span> Helpers and Templates</a></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#guides"><span class="toc-section-number">6.3</span> Guides</a></li>
+<li><a href="gröf-fyrir-fjölbreytt-gögn.html#paid-applications-and-services"><span class="toc-section-number">6.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="framsetning.html#framsetning"><span class="toc-section-number">7</span> Framsetning</a>
+<ul>
+<li><a href="framsetning.html#basic-tools-1"><span class="toc-section-number">7.1</span> Basic Tools</a></li>
+<li><a href="framsetning.html#helpers-and-templates-1"><span class="toc-section-number">7.2</span> Helpers and Templates</a></li>
+<li><a href="framsetning.html#guides-1"><span class="toc-section-number">7.3</span> Guides</a></li>
+<li><a href="framsetning.html#paid-applications-and-services-1"><span class="toc-section-number">7.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="#part-gagnaöflun-og--umbreyting">(PART) Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="framsetning.html#basic-tools-2"><span class="toc-section-number">7.5</span> Basic Tools</a></li>
+<li><a href="framsetning.html#helpers-and-templates-2"><span class="toc-section-number">7.6</span> Helpers and Templates</a></li>
+<li><a href="framsetning.html#guides-2"><span class="toc-section-number">7.7</span> Guides</a></li>
+<li><a href="framsetning.html#paid-applications-and-services-2"><span class="toc-section-number">7.8</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="gagnaöflun-og-umbreyting.html#gagnaöflun-og--umbreyting"><span class="toc-section-number">8</span> Gagnaöflun og -umbreyting</a>
+<ul>
+<li><a href="gagnaöflun-og-umbreyting.html#basic-tools-3"><span class="toc-section-number">8.1</span> Basic Tools</a></li>
+<li><a href="gagnaöflun-og-umbreyting.html#helpers-and-templates-3"><span class="toc-section-number">8.2</span> Helpers and Templates</a></li>
+<li><a href="gagnaöflun-og-umbreyting.html#guides-3"><span class="toc-section-number">8.3</span> Guides</a></li>
+<li><a href="gagnaöflun-og-umbreyting.html#paid-applications-and-services-3"><span class="toc-section-number">8.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#gögn-úr-ólíkum-áttum-í-eina-sæng"><span class="toc-section-number">9</span> Gögn úr ólíkum áttum í eina sæng</a>
+<ul>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#basic-tools-4"><span class="toc-section-number">9.1</span> Basic Tools</a></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#helpers-and-templates-4"><span class="toc-section-number">9.2</span> Helpers and Templates</a></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#guides-4"><span class="toc-section-number">9.3</span> Guides</a></li>
+<li><a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html#paid-applications-and-services-4"><span class="toc-section-number">9.4</span> Paid Applications and Services</a></li>
+</ul></li>
+<li><a href="hvað-svo.html#hvað-svo"><span class="toc-section-number">10</span> Hvað svo?</a>
+<ul>
+<li><a href="hvað-svo.html#basic-tools-5"><span class="toc-section-number">10.1</span> Basic Tools</a></li>
+<li><a href="hvað-svo.html#helpers-and-templates-5"><span class="toc-section-number">10.2</span> Helpers and Templates</a></li>
+<li><a href="hvað-svo.html#guides-5"><span class="toc-section-number">10.3</span> Guides</a></li>
+<li><a href="hvað-svo.html#paid-applications-and-services-5"><span class="toc-section-number">10.4</span> Paid Applications and Services</a></li>
+</ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="hvað-svo" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> Hvað svo?</h1>
+<div id="basic-tools-5" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Basic Tools</h2>
+<ul>
+<li><a href="https://developer.apple.com/library/ios/technotes/tn2339/_index.html">Apple’s Developer Tools</a> Unix toolchain. Install directly with <code>xcode-select --install</code>, or just try to use e.g. <code>git</code> from the terminal and have OS X prompt you to install the tools.</li>
+<li><a href="http://brew.sh">Homebrew package manager</a>. A convenient way to install several of the tools here, including Emacs and Pandoc.</li>
+<li><a href="http://www.gnu.org/software/emacs/">Emacs</a>. A powerful text editor. Ready-to-go Mac version at <a href="http://emacsformacosx">Emacs for Mac OS X</a>.</li>
+<li><a href="http://r-project.org">R</a>. A platform for statistical computing.</li>
+<li><a href="http://yihui.name/knitr/">knitr</a>. Reproducible plain-text documents from within R.</li>
+<li><a href="http://python.org">Python</a> and <a href="http://www.scipy.org/">SciPy</a>. Python is a general-purpose programming language increasingly used in data manipulation and analysis.</li>
+<li><a href="http://rstudio.com">RStudio</a>. An IDE for R. The most straightforward way to get into using R and RMarkdown.</li>
+<li><a href="http://tug.org">TeX and LaTeX</a>. A typesetting and document preparation system. You can write files in <code>.tex</code> format directly, or you can just have it available in the background for other tools to use. The <a href="http://tug.org/mactex">MacTeX Distribution</a> is the one to install for OS X.</li>
+<li><a href="http://pandoc.org">Pandoc</a>. Converts plain-text documents to and from a wide variety of formats. Can be installed with Homebrew. Be sure to also install <code>pandoc-citeproc</code> for processing citations and bibliographies, and <code>pandoc-crossref</code> for producing cross-references and labels.</li>
+<li><a href="http://git-scm.org">Git</a>. Version control system. Installs with Apple’s Developer Tools, or get the latest version via Homebrew.</li>
+<li><a href="http://www.gnu.org/software/make">GNU Make</a>. You tell <code>make</code> what the steps are to create the pieces of a document or program. As you edit and change the various pieces, it automatically figures out which pieces need to be updated and recompiled, and issues the commands to do that. See Karl Broman’s <a href="http://kbroman.org/minimal_make/">Minimal Make</a> for a short introduction. Make will be installed automatically with Apple’s developer tools.</li>
+<li><a href="https://github.com/jimhester/lintr">lintr</a> and <a href="https://github.com/flycheck/flycheck">flycheck</a>. Tools that nudge you to write neater code.</li>
+</ul>
+</div>
+<div id="helpers-and-templates-5" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Helpers and Templates</h2>
+<ul>
+<li><a href="http://kjhealy.github.com/emacs-starter-kit/">Emacs Starter Kit for the Social Sciences</a>. Set Emacs up to use many of the tools described in this guide.</li>
+<li><a href="https://github.com/kjhealy/pandoc-templates">Pandoc Templates</a>. LaTeX and HTML templates, together with Pandoc configuration files and other things needed to produce good-looking PDF, HTML, and Word documents from plain text sources using Pandoc.</li>
+<li><a href="https://github.com/kjhealy/md-starter"><code>md-starter</code> project</a> and <a href="https://github.com/kjhealy/rmd-starter"><code>rmd-starter</code> project</a>. Assuming you have the tools and Pandoc/LaTeX templates installed, these skeleton project folders contain a basic <code>.md</code> or <code>.rmd</code> starter file and a <code>Makefile</code> to produce <code>.html</code>, <code>.tex</code>, <code>.pdf</code> and <code>.docx</code> files as described in this guide.</li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">RMarkdown Cheatsheet</a> An overview of Markdown and RMarkdown conventions.</li>
+<li><a href="https://rstudio.com/resources/cheatsheets/">RStudio Cheatsheets</a> Other quick guides, including a more comprehensive RMarkdown reference and a information about using RStudio’s IDE, and some of the main tools in R.</li>
+</ul>
+</div>
+<div id="guides-5" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Guides</h2>
+<ul>
+<li><a href="http://adv-r.had.co.nz/Style.html">R Style Guide</a>. Write readable code.</li>
+<li><a href="http://stat545-ubc.github.io/topics.html">Jenny Bryan’s Stat 545</a>. Notes and tutorials for a Data Analysis course taught by <a href="http://www.stat.ubc.ca/~jenny/">Jennifer Bryan</a> at the University of British Columbia. Lots of useful material.</li>
+<li><a href="http://yihui.name/knitr/demos">knitr demos</a> Documentation and examples for <code>knitr</code> by its author, Yihui Xie. There is also a <a href="http://www.amazon.com/dp/1498716962/">knitr book</a> covering the same ground in more detail.</li>
+<li><a href="http://rmarkdown.rstudio.com">Rmarkdown documentation</a> from the makers of RStudio. Lots of good examples.</li>
+<li><a href="http://github.com/kjhealy/plain-text.co">Plain Person’s Guide</a> The git repository for this project.</li>
+<li><a href="http://kbroman.org/pages/tutorials">Karl Broman’s Tutorials and Guides</a> Accurate and concise guides to many of the tools and topics described here, including <a href="http://kbroman.org/steps2rr">getting started with reproducible research</a>, <a href="http://kbroman.org/github_tutorial">using git and GitHub</a>, and <a href="http://kbroman.org/knitr_knutshell">working with knitr</a>.</li>
+<li><a href="http://lincolnmullen.com/blog/makefiles-for-ocr-and-converting-shapefiles">Makefiles for OCR and converting Shapefiles</a>. Some further examples of <code>Makefiles</code> in the data-analysis pipeline, by <a href="http://lincolnmullen.com">Lincoln Mullen</a></li>
+</ul>
+</div>
+<div id="paid-applications-and-services-5" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> Paid Applications and Services</h2>
+<ul>
+<li><a href="http://backblaze.com">Backblaze</a>. Secure off-site backup.</li>
+<li><a href="http://crashplan.com">Crashplan</a>. Secure off-site backup.</li>
+<li><a href="http://github.com">GitHub</a>. Host public Git repositories for free. Pay to host private ones. Also a source for publicly available code (e.g. R packages and utilities) written by other people.</li>
+<li><a href="http://marked2app.com">Marked 2</a>. Live HTML previewing of Markdown documents. Mac OS X only.</li>
+<li><a href="http://sublimetext.com">Sublime Text</a>. Python-based text editor.</li>
+<li><a href="http://zotero.org">Zotero</a>, <a href="http://mendeley.com">Mendeley</a>, and <a href="http://papersapp.com">Papers</a> are citation managers that incorporate PDF storage, annotation and other features. Zotero is free to use. Mendeley has a premium tier. Papers is a paid application after a trial period. I don’t use these tools much, but that’s not for any strong principled reason—mostly just intertia. If you use one and want to integrate with the material here, just make sure it can export to BibTeX/BibLaTeX files. Papers, which I’ve used most recently, can handily output citation keys in pandoc’s format amongst several others.</li>
+</ul>
+
+</div>
+</div>
+<p style="text-align: center;">
+<a href="gögn-úr-ólíkum-áttum-í-eina-sæng.html"><button class="btn btn-default">Previous</button></a>
+</p>
+</div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/tablesaw-stackonly.js"></script>
+<script src="js/nudge.min.js"></script>
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

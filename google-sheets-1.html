@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="3 Google Sheets | Gagnalæsi fyrir félagsvísindi" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+
+
+
+<meta name="description" content="3 Google Sheets | Gagnalæsi fyrir félagsvísindi">
+
+<title>3 Google Sheets | Gagnalæsi fyrir félagsvísindi</title>
+
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/envisioned.css" rel="stylesheet" />
+<script src="https://use.typekit.net/ajy6rnl.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<!-- <link rel="stylesheet" href="css/normalize.css"> -->
+<!-- <link rel="stylesheet" href="css/envisioned.css"/> -->
+<link rel="stylesheet" href="css/tablesaw-stackonly.css"/>
+<link rel="stylesheet" href="css/nudge.css"/>
+<link rel="stylesheet" href="css/sourcesans.css"/>
+
+
+
+
+
+<link rel="stylesheet" href="afh.css" type="text/css" />
+
+
+</head>
+
+<body>
+
+<!--bookdown:toc:start-->
+
+<nav class="pushy pushy-left" id="TOC">
+<ul>
+<li><a href="#inngangur"><span class="toc-section-number">1</span> Inngangur</a>
+<ul>
+<li><a href="#markmið"><span class="toc-section-number">1.1</span> Markmið</a></li>
+<li><a href="#fyrir-hverja-er-þessi-bók"><span class="toc-section-number">1.2</span> Fyrir hverja er þessi bók?</a></li>
+<li><a href="#verkfæri"><span class="toc-section-number">1.3</span> Verkfæri</a>
+<ul>
+<li><a href="#google-sheets"><span class="toc-section-number">1.3.1</span> Google Sheets</a></li>
+<li><a href="#r"><span class="toc-section-number">1.3.2</span> R</a></li>
+</ul></li>
+<li><a href="#þakkir"><span class="toc-section-number">1.4</span> Þakkir</a></li>
+</ul></li>
+<li class="part"><span><b>I Gögn og Google Sheets</b></span></li>
+<li><a href="#gögn-gögn-gögn"><span class="toc-section-number">2</span> Gögn, gögn, gögn!</a></li>
+<li><a href="#google-sheets-1"><span class="toc-section-number">3</span> Google Sheets</a></li>
+<li><a href="#lýsandi-tölfræði"><span class="toc-section-number">4</span> Lýsandi tölfræði</a></li>
+<li><a href="#samanburður"><span class="toc-section-number">5</span> Samanburður</a></li>
+<li class="part"><span><b>II Myndræn framsetning og R</b></span></li>
+<li><a href="#myndræn-framsetning"><span class="toc-section-number">6</span> Myndræn framsetning</a></li>
+<li><a href="#r-1"><span class="toc-section-number">7</span> R</a></li>
+<li><a href="#myndræn-framsetning-í-r"><span class="toc-section-number">8</span> Myndræn framsetning í R</a></li>
+<li><a href="#meiri-myndræn-framsetning-í-r"><span class="toc-section-number">9</span> Meiri myndræn framsetning í R</a></li>
+<li><a href="#samvinna-google-sheets-og-r"><span class="toc-section-number">10</span> Samvinna Google Sheets og R</a></li>
+<li class="part"><span><b>III Gagnaöflun og -umbreyting</b></span></li>
+<li><a href="#gögn-sótt-og-sameinuð"><span class="toc-section-number">11</span> Gögn sótt og sameinuð</a></li>
+<li><a href="#umbreyting-gagna"><span class="toc-section-number">12</span> Umbreyting gagna</a></li>
+<li><a href="#faglegur-frágangur"><span class="toc-section-number">13</span> Faglegur frágangur</a></li>
+</ul>
+</nav>
+
+<!--bookdown:toc:end-->
+
+<div class="menu-btn"><h3>☰ Kaflar</h3></div>
+
+<div class="site-overlay"></div>
+
+
+<div class="row">
+<div class="col-sm-12">
+
+<nav class="pushy pushy-left" id="TOC">
+<ul>
+<li><a href="index.html#inngangur"><span class="toc-section-number">1</span> Inngangur</a>
+<ul>
+<li><a href="index.html#markmið"><span class="toc-section-number">1.1</span> Markmið</a></li>
+<li><a href="index.html#fyrir-hverja-er-þessi-bók"><span class="toc-section-number">1.2</span> Fyrir hverja er þessi bók?</a></li>
+<li><a href="index.html#verkfæri"><span class="toc-section-number">1.3</span> Verkfæri</a>
+<ul>
+<li><a href="index.html#google-sheets"><span class="toc-section-number">1.3.1</span> Google Sheets</a></li>
+<li><a href="index.html#r"><span class="toc-section-number">1.3.2</span> R</a></li>
+</ul></li>
+<li><a href="index.html#þakkir"><span class="toc-section-number">1.4</span> Þakkir</a></li>
+</ul></li>
+<li class="part"><span><b>I Gögn og Google Sheets</b></span></li>
+<li><a href="gögn-gögn-gögn.html#gögn-gögn-gögn"><span class="toc-section-number">2</span> Gögn, gögn, gögn!</a></li>
+<li><a href="google-sheets-1.html#google-sheets-1"><span class="toc-section-number">3</span> Google Sheets</a></li>
+<li><a href="lýsandi-tölfræði.html#lýsandi-tölfræði"><span class="toc-section-number">4</span> Lýsandi tölfræði</a></li>
+<li><a href="samanburður.html#samanburður"><span class="toc-section-number">5</span> Samanburður</a></li>
+<li class="part"><span><b>II Myndræn framsetning og R</b></span></li>
+<li><a href="myndræn-framsetning.html#myndræn-framsetning"><span class="toc-section-number">6</span> Myndræn framsetning</a></li>
+<li><a href="r-1.html#r-1"><span class="toc-section-number">7</span> R</a></li>
+<li><a href="myndræn-framsetning-í-r.html#myndræn-framsetning-í-r"><span class="toc-section-number">8</span> Myndræn framsetning í R</a></li>
+<li><a href="meiri-myndræn-framsetning-í-r.html#meiri-myndræn-framsetning-í-r"><span class="toc-section-number">9</span> Meiri myndræn framsetning í R</a></li>
+<li><a href="samvinna-google-sheets-og-r.html#samvinna-google-sheets-og-r"><span class="toc-section-number">10</span> Samvinna Google Sheets og R</a></li>
+<li class="part"><span><b>III Gagnaöflun og -umbreyting</b></span></li>
+<li><a href="gögn-sótt-og-sameinuð.html#gögn-sótt-og-sameinuð"><span class="toc-section-number">11</span> Gögn sótt og sameinuð</a></li>
+<li><a href="umbreyting-gagna.html#umbreyting-gagna"><span class="toc-section-number">12</span> Umbreyting gagna</a></li>
+<li><a href="faglegur-frágangur.html#faglegur-frágangur"><span class="toc-section-number">13</span> Faglegur frágangur</a></li>
+</ul>
+</nav>
+
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="google-sheets-1" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Google Sheets</h1>
+
+</div>
+<p style="text-align: center;">
+<a href="gögn-gögn-gögn.html"><button class="btn btn-default">Previous</button></a>
+<a href="lýsandi-tölfræði.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/tablesaw-stackonly.js"></script>
+<script src="js/nudge.min.js"></script>
+
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>
