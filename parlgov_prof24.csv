@@ -1,173 +1,173 @@
-country_name_short,country_name,election_type,year,election_date,vote_share,seats,seats_total,party_name_short,hl,party_name,party_name_english,left_right,country_id,election_id,previous_parliament_election_id,previous_cabinet_id,party_id,family_name
-DNK,Denmark,parliament,1901,1901-04-03,42.87,76,114,V,0.6666666667,Venstre,Liberal Party,7.292,21,886,,,1605,Liberal
-DNK,Denmark,parliament,1903,1903-06-16,47.14,73,114,V,0.6403508772,Venstre,Liberal Party,7.292,21,887,886,1365,1605,Liberal
-DNK,Denmark,parliament,1906,1906-05-29,31.2,56,114,V,0.4912280702,Venstre,Liberal Party,7.292,21,888,887,1364,1605,Liberal
-DNK,Denmark,parliament,1909,1909-05-25,24,37,114,V,0.3245614035,Venstre,Liberal Party,7.292,21,889,888,1363,1605,Liberal
-DNK,Denmark,parliament,1910,1910-05-20,34.1,57,114,V,0.5,Venstre,Liberal Party,7.292,21,890,889,1361,1605,Liberal
-DNK,Denmark,parliament,1913,1913-05-20,28.6,44,114,V,0.3859649123,Venstre,Liberal Party,7.292,21,891,890,1360,1605,Liberal
-DNK,Denmark,parliament,1915,1915-05-07,,43,114,V,0.3771929825,Venstre,Liberal Party,7.292,21,999,891,1253,1605,Liberal
-DNK,Denmark,parliament,1918,1918-04-22,29.4,45,139,V,0.3237410072,Venstre,Liberal Party,7.292,21,892,999,1252,1605,Liberal
-DNK,Denmark,parliament,1920,1920-04-26,34.2,48,139,V,0.345323741,Venstre,Liberal Party,7.292,21,893,892,1481,1605,Liberal
-DNK,Denmark,parliament,1920,1920-07-06,36.11,51,139,V,0.3669064748,Venstre,Liberal Party,7.292,21,1000,893,1248,1605,Liberal
-DNK,Denmark,parliament,1920,1920-09-21,34,51,148,V,0.3445945946,Venstre,Liberal Party,7.292,21,894,1000,1249,1605,Liberal
-DNK,Denmark,parliament,1924,1924-04-11,28.3,44,148,V,0.2972972973,Venstre,Liberal Party,7.292,21,895,894,1247,1605,Liberal
-DNK,Denmark,parliament,1926,1926-12-02,28.3,46,148,V,0.3108108108,Venstre,Liberal Party,7.292,21,896,895,1246,1605,Liberal
-DNK,Denmark,parliament,1929,1929-04-02,28.3,43,148,V,0.2905405405,Venstre,Liberal Party,7.292,21,897,896,1245,1605,Liberal
-DNK,Denmark,parliament,1932,1932-11-16,24.7,38,148,V,0.2567567568,Venstre,Liberal Party,7.292,21,898,897,1244,1605,Liberal
-DNK,Denmark,parliament,1935,1935-10-22,17.8,28,148,V,0.1891891892,Venstre,Liberal Party,7.292,21,899,898,1243,1605,Liberal
-DNK,Denmark,parliament,1939,1939-04-03,18.2,30,148,V,0.2027027027,Venstre,Liberal Party,7.292,21,900,899,1242,1605,Liberal
-DNK,Denmark,parliament,1943,1943-03-23,18.7,28,148,V,0.1891891892,Venstre,Liberal Party,7.292,21,901,900,1241,1605,Liberal
-DNK,Denmark,parliament,1945,1945-10-30,23.38,38,149,V,0.255033557,Venstre,Liberal Party,7.292,21,121,901,10,1605,Liberal
-DNK,Denmark,parliament,1947,1947-10-28,27.58,49,150,V,0.3266666667,Venstre,Liberal Party,7.292,21,541,121,387,1605,Liberal
-DNK,Denmark,parliament,1950,1950-09-05,21.3,32,151,V,0.2119205298,Venstre,Liberal Party,7.292,21,430,541,408,1605,Liberal
-DNK,Denmark,parliament,1953,1953-04-21,22.1,33,151,V,0.2185430464,Venstre,Liberal Party,7.292,21,213,430,36,1605,Liberal
-DNK,Denmark,parliament,1953,1953-09-22,23.1,42,179,V,0.2346368715,Venstre,Liberal Party,7.292,21,630,213,359,1605,Liberal
-DNK,Denmark,parliament,1957,1957-05-14,25.1,45,179,V,0.251396648,Venstre,Liberal Party,7.292,21,263,630,218,1605,Liberal
-DNK,Denmark,parliament,1960,1960-11-15,21.1,38,179,V,0.2122905028,Venstre,Liberal Party,7.292,21,73,263,467,1605,Liberal
-DNK,Denmark,parliament,1964,1964-09-22,20.8,38,179,V,0.2122905028,Venstre,Liberal Party,7.292,21,288,73,841,1605,Liberal
-DNK,Denmark,parliament,1966,1966-11-22,19.29,35,179,V,0.1955307263,Venstre,Liberal Party,7.292,21,97,288,660,1605,Liberal
-DNK,Denmark,parliament,1968,1968-01-23,18.6,34,179,V,0.1899441341,Venstre,Liberal Party,7.292,21,531,97,825,1605,Liberal
-DNK,Denmark,parliament,1971,1971-09-21,15.6,30,179,V,0.1675977654,Venstre,Liberal Party,7.292,21,400,531,596,1605,Liberal
-DNK,Denmark,parliament,1973,1973-12-04,12.3,22,179,V,0.1229050279,Venstre,Liberal Party,7.292,21,64,400,320,1605,Liberal
-DNK,Denmark,parliament,1975,1975-01-09,23.3,42,179,V,0.2346368715,Venstre,Liberal Party,7.292,21,464,64,744,1605,Liberal
-DNK,Denmark,parliament,1977,1977-02-15,12,21,179,V,0.1173184358,Venstre,Liberal Party,7.292,21,409,464,50,1605,Liberal
-DNK,Denmark,parliament,1979,1979-10-23,12.5,22,179,V,0.1229050279,Venstre,Liberal Party,7.292,21,242,409,824,1605,Liberal
-DNK,Denmark,parliament,1981,1981-12-08,11.3,20,179,V,0.1117318436,Venstre,Liberal Party,7.292,21,179,242,379,1605,Liberal
-DNK,Denmark,parliament,1984,1984-01-10,12.1,22,179,V,0.1229050279,Venstre,Liberal Party,7.292,21,597,179,819,1605,Liberal
-DNK,Denmark,parliament,1987,1987-09-08,10.5,19,179,V,0.1061452514,Venstre,Liberal Party,7.292,21,226,597,195,1605,Liberal
-DNK,Denmark,parliament,1988,1988-05-10,11.8,22,179,V,0.1229050279,Venstre,Liberal Party,7.292,21,387,226,837,1605,Liberal
-DNK,Denmark,parliament,1990,1990-12-12,15.8,29,179,V,0.1620111732,Venstre,Liberal Party,7.292,21,157,387,57,1605,Liberal
-DNK,Denmark,parliament,1994,1994-09-21,23.3,42,179,V,0.2346368715,Venstre,Liberal Party,7.292,21,89,157,740,1605,Liberal
-DNK,Denmark,parliament,1998,1998-03-11,24,42,179,V,0.2346368715,Venstre,Liberal Party,7.292,21,389,89,255,1605,Liberal
-DNK,Denmark,parliament,2001,2001-11-20,31.2,56,179,V,0.312849162,Venstre,Liberal Party,7.292,21,632,389,630,1605,Liberal
-DNK,Denmark,parliament,2005,2005-02-08,29,52,179,V,0.2905027933,Venstre,Liberal Party,7.292,21,563,632,482,1605,Liberal
-DNK,Denmark,parliament,2007,2007-11-13,26.2,46,179,V,0.2569832402,Venstre,Liberal Party,7.292,21,174,563,316,1605,Liberal
-DNK,Denmark,parliament,2011,2011-09-15,26.7,47,179,V,0.2625698324,Venstre,Liberal Party,7.292,21,722,174,71,1605,Liberal
-DNK,Denmark,parliament,2015,2015-06-18,19.5,34,179,V,0.1899441341,Venstre,Liberal Party,7.292,21,976,722,1074,1605,Liberal
-DNK,Denmark,parliament,2019,2019-06-05,23.4,43,179,V,0.2402234637,Venstre,Liberal Party,7.292,21,1077,976,1497,1605,Liberal
-FIN,Finland,parliament,1919,1919-03-03,15.7,28,200,KOK,0.14,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,903,902,1220,1118,Conservative
-FIN,Finland,parliament,1922,1922-07-03,18.2,35,200,KOK,0.175,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,904,903,1215,1118,Conservative
-FIN,Finland,parliament,1927,1927-07-01,17.7,34,200,KOK,0.17,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,340,904,1208,1118,Conservative
-FIN,Finland,parliament,1929,1929-07-01,14.5,28,200,KOK,0.14,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,577,340,1206,1118,Conservative
-FIN,Finland,parliament,1930,1930-10-01,18,42,200,KOK,0.21,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,269,577,1204,1118,Conservative
-FIN,Finland,parliament,1933,1933-07-01,16.9,18,200,KOK,0.09,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,689,269,1202,1118,Conservative
-FIN,Finland,parliament,1936,1936-07-01,10.4,20,200,KOK,0.1,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,142,689,1201,1118,Conservative
-FIN,Finland,parliament,1939,1939-07-01,13.6,25,200,KOK,0.125,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,297,142,1199,1118,Conservative
-FIN,Finland,parliament,1945,1945-03-18,15,28,200,KOK,0.14,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,101,297,120,1118,Conservative
-FIN,Finland,parliament,1948,1948-07-02,17,33,200,KOK,0.165,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,187,101,125,1118,Conservative
-FIN,Finland,parliament,1951,1951-07-03,14.6,28,200,KOK,0.14,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,575,187,639,1118,Conservative
-FIN,Finland,parliament,1954,1954-03-08,12.8,24,200,KOK,0.12,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,71,575,738,1118,Conservative
-FIN,Finland,parliament,1958,1958-07-07,15.3,29,200,KOK,0.145,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,616,71,791,1118,Conservative
-FIN,Finland,parliament,1962,1962-02-05,15,32,200,KOK,0.16,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,354,616,598,1118,Conservative
-FIN,Finland,parliament,1966,1966-03-21,13.8,26,200,KOK,0.13,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,460,354,139,1118,Conservative
-FIN,Finland,parliament,1970,1970-03-16,18,37,200,KOK,0.185,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,77,460,203,1118,Conservative
-FIN,Finland,parliament,1972,1972-01-03,17.58,34,200,KOK,0.17,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,636,77,391,1118,Conservative
-FIN,Finland,parliament,1975,1975-09-22,18.4,35,200,KOK,0.175,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,98,636,143,1118,Conservative
-FIN,Finland,parliament,1979,1979-03-19,21.7,47,200,KOK,0.235,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,84,98,492,1118,Conservative
-FIN,Finland,parliament,1983,1983-03-21,22.1,44,200,KOK,0.22,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,133,84,34,1118,Conservative
-FIN,Finland,parliament,1987,1987-03-16,23.1,53,200,KOK,0.265,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,527,133,650,1118,Conservative
-FIN,Finland,parliament,1991,1991-03-17,19.3,40,200,KOK,0.2,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,602,527,41,1118,Conservative
-FIN,Finland,parliament,1995,1995-03-19,17.9,39,200,KOK,0.195,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,24,602,206,1118,Conservative
-FIN,Finland,parliament,1999,1999-03-21,21,46,200,KOK,0.23,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,15,24,100,1118,Conservative
-FIN,Finland,parliament,2003,2003-03-16,18.6,40,200,KOK,0.2,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,253,15,663,1118,Conservative
-FIN,Finland,parliament,2007,2007-03-18,22.3,50,200,KOK,0.25,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,314,253,759,1118,Conservative
-FIN,Finland,parliament,2011,2011-04-17,20.4,44,200,KOK,0.22,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,700,314,383,1118,Conservative
-FIN,Finland,parliament,2015,2015-04-19,18.2,37,200,KOK,0.185,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,855,700,1145,1118,Conservative
-FIN,Finland,parliament,2019,2019-04-14,17,38,200,KOK,0.19,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,1045,855,1510,1118,Conservative
-ISL,Iceland,parliament,1923,1923-10-27,53.6,23,40,Sj,0.575,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,923,922,1425,1342,Conservative
-ISL,Iceland,parliament,1927,1927-07-09,42.5,16,42,Sj,0.380952381,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,924,923,1428,1342,Conservative
-ISL,Iceland,parliament,1931,1931-06-12,43.8,15,42,Sj,0.3571428571,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,925,924,1429,1342,Conservative
-ISL,Iceland,parliament,1933,1933-07-16,48,20,42,Sj,0.4761904762,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,926,925,1431,1342,Conservative
-ISL,Iceland,parliament,1934,1934-06-24,42.32,20,49,Sj,0.4081632653,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,927,926,1431,1342,Conservative
-ISL,Iceland,parliament,1937,1937-06-29,41.3,17,49,Sj,0.3469387755,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,928,927,1432,1342,Conservative
-ISL,Iceland,parliament,1942,1942-07-05,39.5,17,49,Sj,0.3469387755,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,929,928,1434,1342,Conservative
-ISL,Iceland,parliament,1942,1942-10-19,38.5,20,52,Sj,0.3846153846,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,780,929,1434,1342,Conservative
-ISL,Iceland,parliament,1946,1946-06-30,39.5,20,52,Sj,0.3846153846,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,35,780,435,1342,Conservative
-ISL,Iceland,parliament,1949,1949-10-24,39.5,19,52,Sj,0.3653846154,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,259,35,742,1342,Conservative
-ISL,Iceland,parliament,1953,1953-06-28,37.1,21,52,Sj,0.4038461538,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,88,259,766,1342,Conservative
-ISL,Iceland,parliament,1956,1956-06-24,42.4,19,52,Sj,0.3653846154,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,665,88,762,1342,Conservative
-ISL,Iceland,parliament,1959,1959-06-28,42.5,20,52,Sj,0.3846153846,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,393,665,446,1342,Conservative
-ISL,Iceland,parliament,1959,1959-10-26,39.7,24,60,Sj,0.4,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,320,393,351,1342,Conservative
-ISL,Iceland,parliament,1963,1963-06-09,41.4,24,60,Sj,0.4,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,379,320,331,1342,Conservative
-ISL,Iceland,parliament,1967,1967-06-11,37.5,23,60,Sj,0.3833333333,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,318,379,553,1342,Conservative
-ISL,Iceland,parliament,1971,1971-06-13,36.2,22,60,Sj,0.3666666667,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,225,318,321,1342,Conservative
-ISL,Iceland,parliament,1974,1974-06-30,42.7,25,60,Sj,0.4166666667,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,637,225,272,1342,Conservative
-ISL,Iceland,parliament,1978,1978-06-25,32.7,20,60,Sj,0.3333333333,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,275,637,849,1342,Conservative
-ISL,Iceland,parliament,1979,1979-12-03,35.4,21,60,Sj,0.35,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,436,275,536,1342,Conservative
-ISL,Iceland,parliament,1983,1983-04-23,38.7,23,60,Sj,0.3833333333,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,114,436,752,1342,Conservative
-ISL,Iceland,parliament,1987,1987-04-25,27.2,18,63,Sj,0.2857142857,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,673,114,393,1342,Conservative
-ISL,Iceland,parliament,1991,1991-04-20,38.6,26,63,Sj,0.4126984127,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,274,673,127,1342,Conservative
-ISL,Iceland,parliament,1995,1995-04-08,37.1,25,63,Sj,0.3968253968,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,82,274,640,1342,Conservative
-ISL,Iceland,parliament,1999,1999-05-08,40.7,26,63,Sj,0.4126984127,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,592,82,158,1342,Conservative
-ISL,Iceland,parliament,2003,2003-05-10,33.7,22,63,Sj,0.3492063492,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,178,592,177,1342,Conservative
-ISL,Iceland,parliament,2007,2007-05-12,36.6,25,63,Sj,0.3968253968,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,265,178,246,1342,Conservative
-ISL,Iceland,parliament,2009,2009-04-25,23.7,16,63,Sj,0.253968254,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,36,265,538,1342,Conservative
-ISL,Iceland,parliament,2013,2013-04-27,26.7,19,63,Sj,0.3015873016,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,798,36,651,1342,Conservative
-ISL,Iceland,parliament,2016,2016-10-29,28.17,21,63,Sj,0.3333333333,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,1008,798,1482,1342,Conservative
-ISL,Iceland,parliament,2017,2017-10-28,25.2,16,63,Sj,0.253968254,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,1021,1008,1502,1342,Conservative
-NOR,Norway,parliament,1900,1900-07-01,40.8,31,114,H,0.2719298246,Høyre,Conservative Party,7.8994,9,943,,,1435,Conservative
-NOR,Norway,parliament,1903,1903-09-16,44.8,52,117,H,0.4444444444,Høyre,Conservative Party,7.8994,9,944,943,1378,1435,Conservative
-NOR,Norway,parliament,1906,1906-08-27,32.8,36,123,H,0.2926829268,Høyre,Conservative Party,7.8994,9,945,944,1380,1435,Conservative
-NOR,Norway,parliament,1909,1909-10-25,41.5,41,123,H,0.3333333333,Høyre,Conservative Party,7.8994,9,946,945,1382,1435,Conservative
-NOR,Norway,parliament,1912,1912-10-21,33.2,20,123,H,0.162601626,Høyre,Conservative Party,7.8994,9,947,946,1384,1435,Conservative
-NOR,Norway,parliament,1915,1915-10-21,29,20,123,H,0.162601626,Høyre,Conservative Party,7.8994,9,948,947,1240,1435,Conservative
-NOR,Norway,parliament,1918,1918-10-21,30.4,40,126,H,0.3174603175,Høyre,Conservative Party,7.8994,9,949,948,1239,1435,Conservative
-NOR,Norway,parliament,1921,1921-10-24,33.3,42,150,H,0.28,Høyre,Conservative Party,7.8994,9,950,949,1235,1435,Conservative
-NOR,Norway,parliament,1924,1924-10-21,32.5,43,150,H,0.2866666667,Høyre,Conservative Party,7.8994,9,951,950,1233,1435,Conservative
-NOR,Norway,parliament,1927,1927-10-17,24.03,29,150,H,0.1933333333,Høyre,Conservative Party,7.8994,9,867,951,1231,1435,Conservative
-NOR,Norway,parliament,1930,1930-10-20,27.43,39,150,H,0.26,Høyre,Conservative Party,7.8994,9,866,867,1229,1435,Conservative
-NOR,Norway,parliament,1933,1933-10-16,20.22,30,150,H,0.2,Høyre,Conservative Party,7.8994,9,865,866,1225,1435,Conservative
-NOR,Norway,parliament,1936,1936-10-19,21.32,36,150,H,0.24,Høyre,Conservative Party,7.8994,9,864,865,1223,1435,Conservative
-NOR,Norway,parliament,1945,1945-10-08,17,25,150,H,0.1666666667,Høyre,Conservative Party,7.8994,9,220,864,666,1435,Conservative
-NOR,Norway,parliament,1949,1949-10-10,15.91,21,150,H,0.14,Høyre,Conservative Party,7.8994,9,478,220,58,1435,Conservative
-NOR,Norway,parliament,1953,1953-10-12,18.43,26,150,H,0.1733333333,Høyre,Conservative Party,7.8994,9,167,478,487,1435,Conservative
-NOR,Norway,parliament,1957,1957-10-07,16.8,29,150,H,0.1933333333,Høyre,Conservative Party,7.8994,9,429,167,221,1435,Conservative
-NOR,Norway,parliament,1961,1961-09-11,19.3,29,150,H,0.1933333333,Høyre,Conservative Party,7.8994,9,622,429,61,1435,Conservative
-NOR,Norway,parliament,1965,1965-09-12,20.3,31,150,H,0.2066666667,Høyre,Conservative Party,7.8994,9,517,622,510,1435,Conservative
-NOR,Norway,parliament,1969,1969-09-07,18.8,29,150,H,0.1933333333,Høyre,Conservative Party,7.8994,9,580,517,284,1435,Conservative
-NOR,Norway,parliament,1973,1973-09-09,17.38,29,155,H,0.1870967742,Høyre,Conservative Party,7.8994,9,523,580,822,1435,Conservative
-NOR,Norway,parliament,1977,1977-09-11,24.8,41,155,H,0.264516129,Høyre,Conservative Party,7.8994,9,499,523,520,1435,Conservative
-NOR,Norway,parliament,1981,1981-09-14,31.7,54,155,H,0.3483870968,Høyre,Conservative Party,7.8994,9,100,499,81,1435,Conservative
-NOR,Norway,parliament,1985,1985-09-08,30.4,50,157,H,0.3184713376,Høyre,Conservative Party,7.8994,9,207,100,181,1435,Conservative
-NOR,Norway,parliament,1989,1989-09-11,22.2,37,165,H,0.2242424242,Høyre,Conservative Party,7.8994,9,571,207,394,1435,Conservative
-NOR,Norway,parliament,1993,1993-09-13,17,28,165,H,0.1696969697,Høyre,Conservative Party,7.8994,9,404,571,588,1435,Conservative
-NOR,Norway,parliament,1997,1997-09-16,14.3,23,165,H,0.1393939394,Høyre,Conservative Party,7.8994,9,669,404,813,1435,Conservative
-NOR,Norway,parliament,2001,2001-09-10,21.2,38,165,H,0.2303030303,Høyre,Conservative Party,7.8994,9,328,669,333,1435,Conservative
-NOR,Norway,parliament,2005,2005-09-12,14.1,23,169,H,0.1360946746,Høyre,Conservative Party,7.8994,9,3,328,300,1435,Conservative
-NOR,Norway,parliament,2009,2009-09-14,17.2,30,169,H,0.1775147929,Høyre,Conservative Party,7.8994,9,285,3,693,1435,Conservative
-NOR,Norway,parliament,2013,2013-09-09,25.8,48,169,H,0.2840236686,Høyre,Conservative Party,7.8994,9,801,285,551,1435,Conservative
-NOR,Norway,parliament,2017,2017-09-11,25,45,169,H,0.2662721893,Høyre,Conservative Party,7.8994,9,1017,801,1065,1435,Conservative
-SWE,Sweden,parliament,1911,1911-09-24,31.2,64,230,M,0.2782608696,Moderaterna,Moderate Party,7.8907,35,961,,,657,Conservative
-SWE,Sweden,parliament,1914,1914-04-07,37.7,86,230,M,0.3739130435,Moderaterna,Moderate Party,7.8907,35,962,961,1369,657,Conservative
-SWE,Sweden,parliament,1914,1914-09-13,36.5,86,230,M,0.3739130435,Moderaterna,Moderate Party,7.8907,35,963,962,1369,657,Conservative
-SWE,Sweden,parliament,1917,1917-09-16,24.7,57,217,M,0.2626728111,Moderaterna,Moderate Party,7.8907,35,964,963,1368,657,Conservative
-SWE,Sweden,parliament,1920,1920-09-17,27.8,70,228,M,0.3070175439,Moderaterna,Moderate Party,7.8907,35,965,964,1193,657,Conservative
-SWE,Sweden,parliament,1921,1921-09-26,25.8,62,230,M,0.2695652174,Moderaterna,Moderate Party,7.8907,35,966,965,1191,657,Conservative
-SWE,Sweden,parliament,1924,1924-09-21,26.1,65,230,M,0.2826086957,Moderaterna,Moderate Party,7.8907,35,967,966,1189,657,Conservative
-SWE,Sweden,parliament,1928,1928-09-21,29.4,73,230,M,0.3173913043,Moderaterna,Moderate Party,7.8907,35,968,967,1186,657,Conservative
-SWE,Sweden,parliament,1932,1932-09-18,23.5,58,230,M,0.252173913,Moderaterna,Moderate Party,7.8907,35,969,968,1184,657,Conservative
-SWE,Sweden,parliament,1936,1936-09-20,17.6,44,230,M,0.1913043478,Moderaterna,Moderate Party,7.8907,35,970,969,1182,657,Conservative
-SWE,Sweden,parliament,1940,1940-09-15,18,42,230,M,0.1826086957,Moderaterna,Moderate Party,7.8907,35,971,970,1179,657,Conservative
-SWE,Sweden,parliament,1944,1944-09-17,15.8,39,230,M,0.1695652174,Moderaterna,Moderate Party,7.8907,35,485,971,1180,657,Conservative
-SWE,Sweden,parliament,1948,1948-09-19,12.3,23,230,M,0.1,Moderaterna,Moderate Party,7.8907,35,431,485,628,657,Conservative
-SWE,Sweden,parliament,1952,1952-09-21,14.4,31,230,M,0.1347826087,Moderaterna,Moderate Party,7.8907,35,234,431,361,657,Conservative
-SWE,Sweden,parliament,1956,1956-09-16,17.1,42,231,M,0.1818181818,Moderaterna,Moderate Party,7.8907,35,450,234,781,657,Conservative
-SWE,Sweden,parliament,1958,1958-06-01,19.5,45,231,M,0.1948051948,Moderaterna,Moderate Party,7.8907,35,251,450,380,657,Conservative
-SWE,Sweden,parliament,1960,1960-09-18,16.6,39,232,M,0.1681034483,Moderaterna,Moderate Party,7.8907,35,295,251,208,657,Conservative
-SWE,Sweden,parliament,1964,1964-09-20,13.7,32,233,M,0.1373390558,Moderaterna,Moderate Party,7.8907,35,41,295,424,657,Conservative
-SWE,Sweden,parliament,1968,1968-09-15,12.9,29,233,M,0.1244635193,Moderaterna,Moderate Party,7.8907,35,655,41,506,657,Conservative
-SWE,Sweden,parliament,1970,1970-09-20,11.5,41,350,M,0.1171428571,Moderaterna,Moderate Party,7.8907,35,258,655,219,657,Conservative
-SWE,Sweden,parliament,1973,1973-09-16,14.3,51,350,M,0.1457142857,Moderaterna,Moderate Party,7.8907,35,215,258,577,657,Conservative
-SWE,Sweden,parliament,1976,1976-09-19,15.6,55,349,M,0.1575931232,Moderaterna,Moderate Party,7.8907,35,262,215,438,657,Conservative
-SWE,Sweden,parliament,1979,1979-09-16,20.3,73,349,M,0.2091690544,Moderaterna,Moderate Party,7.8907,35,473,262,587,657,Conservative
-SWE,Sweden,parliament,1982,1982-09-19,23.6,86,349,M,0.2464183381,Moderaterna,Moderate Party,7.8907,35,175,473,142,657,Conservative
-SWE,Sweden,parliament,1985,1985-09-15,21.3,76,349,M,0.217765043,Moderaterna,Moderate Party,7.8907,35,48,175,647,657,Conservative
-SWE,Sweden,parliament,1988,1988-09-18,18.3,66,349,M,0.1891117479,Moderaterna,Moderate Party,7.8907,35,428,48,478,657,Conservative
-SWE,Sweden,parliament,1991,1991-09-15,21.9,80,349,M,0.229226361,Moderaterna,Moderate Party,7.8907,35,472,428,732,657,Conservative
-SWE,Sweden,parliament,1994,1994-09-18,22.4,80,349,M,0.229226361,Moderaterna,Moderate Party,7.8907,35,412,472,779,657,Conservative
-SWE,Sweden,parliament,1998,1998-09-20,22.9,82,349,M,0.2349570201,Moderaterna,Moderate Party,7.8907,35,33,412,156,657,Conservative
-SWE,Sweden,parliament,2002,2002-09-15,15.3,55,349,M,0.1575931232,Moderaterna,Moderate Party,7.8907,35,156,33,503,657,Conservative
-SWE,Sweden,parliament,2006,2006-09-17,26.1,97,349,M,0.2779369628,Moderaterna,Moderate Party,7.8907,35,629,156,641,657,Conservative
-SWE,Sweden,parliament,2010,2010-09-19,30.06,107,349,M,0.3065902579,Moderaterna,Moderate Party,7.8907,35,512,629,475,657,Conservative
-SWE,Sweden,parliament,2014,2014-09-14,23.33,84,349,M,0.2406876791,Moderaterna,Moderate Party,7.8907,35,828,512,854,657,Conservative
-SWE,Sweden,parliament,2018,2018-09-09,19.84,70,349,M,0.2005730659,Moderaterna,Moderate Party,7.8907,35,1041,828,1149,657,Conservative
+country_name_short,country_name,election_type,year,election_date,vote_share,seats,seats_total,party_name_short,hl,party_name,party_name_english,left_right,country_id,election_id,previous_parliament_election_id,previous_cabinet_id,party_id,family_name,is_d
+DNK,Denmark,parliament,1901,1901-04-03,42.87,76,114,V,0.6666666667,Venstre,Liberal Party,7.292,21,886,,,1605,Liberal,0
+DNK,Denmark,parliament,1903,1903-06-16,47.14,73,114,V,0.6403508772,Venstre,Liberal Party,7.292,21,887,886,1365,1605,Liberal,0
+DNK,Denmark,parliament,1906,1906-05-29,31.2,56,114,V,0.4912280702,Venstre,Liberal Party,7.292,21,888,887,1364,1605,Liberal,0
+DNK,Denmark,parliament,1909,1909-05-25,24,37,114,V,0.3245614035,Venstre,Liberal Party,7.292,21,889,888,1363,1605,Liberal,0
+DNK,Denmark,parliament,1910,1910-05-20,34.1,57,114,V,0.5,Venstre,Liberal Party,7.292,21,890,889,1361,1605,Liberal,0
+DNK,Denmark,parliament,1913,1913-05-20,28.6,44,114,V,0.3859649123,Venstre,Liberal Party,7.292,21,891,890,1360,1605,Liberal,0
+DNK,Denmark,parliament,1915,1915-05-07,,43,114,V,0.3771929825,Venstre,Liberal Party,7.292,21,999,891,1253,1605,Liberal,0
+DNK,Denmark,parliament,1918,1918-04-22,29.4,45,139,V,0.3237410072,Venstre,Liberal Party,7.292,21,892,999,1252,1605,Liberal,0
+DNK,Denmark,parliament,1920,1920-04-26,34.2,48,139,V,0.345323741,Venstre,Liberal Party,7.292,21,893,892,1481,1605,Liberal,0
+DNK,Denmark,parliament,1920,1920-07-06,36.11,51,139,V,0.3669064748,Venstre,Liberal Party,7.292,21,1000,893,1248,1605,Liberal,0
+DNK,Denmark,parliament,1920,1920-09-21,34,51,148,V,0.3445945946,Venstre,Liberal Party,7.292,21,894,1000,1249,1605,Liberal,0
+DNK,Denmark,parliament,1924,1924-04-11,28.3,44,148,V,0.2972972973,Venstre,Liberal Party,7.292,21,895,894,1247,1605,Liberal,0
+DNK,Denmark,parliament,1926,1926-12-02,28.3,46,148,V,0.3108108108,Venstre,Liberal Party,7.292,21,896,895,1246,1605,Liberal,0
+DNK,Denmark,parliament,1929,1929-04-02,28.3,43,148,V,0.2905405405,Venstre,Liberal Party,7.292,21,897,896,1245,1605,Liberal,0
+DNK,Denmark,parliament,1932,1932-11-16,24.7,38,148,V,0.2567567568,Venstre,Liberal Party,7.292,21,898,897,1244,1605,Liberal,0
+DNK,Denmark,parliament,1935,1935-10-22,17.8,28,148,V,0.1891891892,Venstre,Liberal Party,7.292,21,899,898,1243,1605,Liberal,0
+DNK,Denmark,parliament,1939,1939-04-03,18.2,30,148,V,0.2027027027,Venstre,Liberal Party,7.292,21,900,899,1242,1605,Liberal,0
+DNK,Denmark,parliament,1943,1943-03-23,18.7,28,148,V,0.1891891892,Venstre,Liberal Party,7.292,21,901,900,1241,1605,Liberal,0
+DNK,Denmark,parliament,1945,1945-10-30,23.38,38,149,V,0.255033557,Venstre,Liberal Party,7.292,21,121,901,10,1605,Liberal,0
+DNK,Denmark,parliament,1947,1947-10-28,27.58,49,150,V,0.3266666667,Venstre,Liberal Party,7.292,21,541,121,387,1605,Liberal,0
+DNK,Denmark,parliament,1950,1950-09-05,21.3,32,151,V,0.2119205298,Venstre,Liberal Party,7.292,21,430,541,408,1605,Liberal,0
+DNK,Denmark,parliament,1953,1953-04-21,22.1,33,151,V,0.2185430464,Venstre,Liberal Party,7.292,21,213,430,36,1605,Liberal,0
+DNK,Denmark,parliament,1953,1953-09-22,23.1,42,179,V,0.2346368715,Venstre,Liberal Party,7.292,21,630,213,359,1605,Liberal,0
+DNK,Denmark,parliament,1957,1957-05-14,25.1,45,179,V,0.251396648,Venstre,Liberal Party,7.292,21,263,630,218,1605,Liberal,0
+DNK,Denmark,parliament,1960,1960-11-15,21.1,38,179,V,0.2122905028,Venstre,Liberal Party,7.292,21,73,263,467,1605,Liberal,0
+DNK,Denmark,parliament,1964,1964-09-22,20.8,38,179,V,0.2122905028,Venstre,Liberal Party,7.292,21,288,73,841,1605,Liberal,0
+DNK,Denmark,parliament,1966,1966-11-22,19.29,35,179,V,0.1955307263,Venstre,Liberal Party,7.292,21,97,288,660,1605,Liberal,0
+DNK,Denmark,parliament,1968,1968-01-23,18.6,34,179,V,0.1899441341,Venstre,Liberal Party,7.292,21,531,97,825,1605,Liberal,0
+DNK,Denmark,parliament,1971,1971-09-21,15.6,30,179,V,0.1675977654,Venstre,Liberal Party,7.292,21,400,531,596,1605,Liberal,0
+DNK,Denmark,parliament,1973,1973-12-04,12.3,22,179,V,0.1229050279,Venstre,Liberal Party,7.292,21,64,400,320,1605,Liberal,0
+DNK,Denmark,parliament,1975,1975-01-09,23.3,42,179,V,0.2346368715,Venstre,Liberal Party,7.292,21,464,64,744,1605,Liberal,0
+DNK,Denmark,parliament,1977,1977-02-15,12,21,179,V,0.1173184358,Venstre,Liberal Party,7.292,21,409,464,50,1605,Liberal,0
+DNK,Denmark,parliament,1979,1979-10-23,12.5,22,179,V,0.1229050279,Venstre,Liberal Party,7.292,21,242,409,824,1605,Liberal,0
+DNK,Denmark,parliament,1981,1981-12-08,11.3,20,179,V,0.1117318436,Venstre,Liberal Party,7.292,21,179,242,379,1605,Liberal,0
+DNK,Denmark,parliament,1984,1984-01-10,12.1,22,179,V,0.1229050279,Venstre,Liberal Party,7.292,21,597,179,819,1605,Liberal,0
+DNK,Denmark,parliament,1987,1987-09-08,10.5,19,179,V,0.1061452514,Venstre,Liberal Party,7.292,21,226,597,195,1605,Liberal,0
+DNK,Denmark,parliament,1988,1988-05-10,11.8,22,179,V,0.1229050279,Venstre,Liberal Party,7.292,21,387,226,837,1605,Liberal,0
+DNK,Denmark,parliament,1990,1990-12-12,15.8,29,179,V,0.1620111732,Venstre,Liberal Party,7.292,21,157,387,57,1605,Liberal,0
+DNK,Denmark,parliament,1994,1994-09-21,23.3,42,179,V,0.2346368715,Venstre,Liberal Party,7.292,21,89,157,740,1605,Liberal,0
+DNK,Denmark,parliament,1998,1998-03-11,24,42,179,V,0.2346368715,Venstre,Liberal Party,7.292,21,389,89,255,1605,Liberal,0
+DNK,Denmark,parliament,2001,2001-11-20,31.2,56,179,V,0.312849162,Venstre,Liberal Party,7.292,21,632,389,630,1605,Liberal,0
+DNK,Denmark,parliament,2005,2005-02-08,29,52,179,V,0.2905027933,Venstre,Liberal Party,7.292,21,563,632,482,1605,Liberal,0
+DNK,Denmark,parliament,2007,2007-11-13,26.2,46,179,V,0.2569832402,Venstre,Liberal Party,7.292,21,174,563,316,1605,Liberal,0
+DNK,Denmark,parliament,2011,2011-09-15,26.7,47,179,V,0.2625698324,Venstre,Liberal Party,7.292,21,722,174,71,1605,Liberal,0
+DNK,Denmark,parliament,2015,2015-06-18,19.5,34,179,V,0.1899441341,Venstre,Liberal Party,7.292,21,976,722,1074,1605,Liberal,0
+DNK,Denmark,parliament,2019,2019-06-05,23.4,43,179,V,0.2402234637,Venstre,Liberal Party,7.292,21,1077,976,1497,1605,Liberal,0
+FIN,Finland,parliament,1919,1919-03-03,15.7,28,200,KOK,0.14,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,903,902,1220,1118,Conservative,0
+FIN,Finland,parliament,1922,1922-07-03,18.2,35,200,KOK,0.175,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,904,903,1215,1118,Conservative,0
+FIN,Finland,parliament,1927,1927-07-01,17.7,34,200,KOK,0.17,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,340,904,1208,1118,Conservative,0
+FIN,Finland,parliament,1929,1929-07-01,14.5,28,200,KOK,0.14,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,577,340,1206,1118,Conservative,0
+FIN,Finland,parliament,1930,1930-10-01,18,42,200,KOK,0.21,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,269,577,1204,1118,Conservative,0
+FIN,Finland,parliament,1933,1933-07-01,16.9,18,200,KOK,0.09,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,689,269,1202,1118,Conservative,0
+FIN,Finland,parliament,1936,1936-07-01,10.4,20,200,KOK,0.1,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,142,689,1201,1118,Conservative,0
+FIN,Finland,parliament,1939,1939-07-01,13.6,25,200,KOK,0.125,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,297,142,1199,1118,Conservative,0
+FIN,Finland,parliament,1945,1945-03-18,15,28,200,KOK,0.14,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,101,297,120,1118,Conservative,0
+FIN,Finland,parliament,1948,1948-07-02,17,33,200,KOK,0.165,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,187,101,125,1118,Conservative,0
+FIN,Finland,parliament,1951,1951-07-03,14.6,28,200,KOK,0.14,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,575,187,639,1118,Conservative,0
+FIN,Finland,parliament,1954,1954-03-08,12.8,24,200,KOK,0.12,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,71,575,738,1118,Conservative,0
+FIN,Finland,parliament,1958,1958-07-07,15.3,29,200,KOK,0.145,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,616,71,791,1118,Conservative,0
+FIN,Finland,parliament,1962,1962-02-05,15,32,200,KOK,0.16,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,354,616,598,1118,Conservative,0
+FIN,Finland,parliament,1966,1966-03-21,13.8,26,200,KOK,0.13,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,460,354,139,1118,Conservative,0
+FIN,Finland,parliament,1970,1970-03-16,18,37,200,KOK,0.185,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,77,460,203,1118,Conservative,0
+FIN,Finland,parliament,1972,1972-01-03,17.58,34,200,KOK,0.17,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,636,77,391,1118,Conservative,0
+FIN,Finland,parliament,1975,1975-09-22,18.4,35,200,KOK,0.175,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,98,636,143,1118,Conservative,0
+FIN,Finland,parliament,1979,1979-03-19,21.7,47,200,KOK,0.235,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,84,98,492,1118,Conservative,0
+FIN,Finland,parliament,1983,1983-03-21,22.1,44,200,KOK,0.22,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,133,84,34,1118,Conservative,0
+FIN,Finland,parliament,1987,1987-03-16,23.1,53,200,KOK,0.265,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,527,133,650,1118,Conservative,0
+FIN,Finland,parliament,1991,1991-03-17,19.3,40,200,KOK,0.2,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,602,527,41,1118,Conservative,0
+FIN,Finland,parliament,1995,1995-03-19,17.9,39,200,KOK,0.195,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,24,602,206,1118,Conservative,0
+FIN,Finland,parliament,1999,1999-03-21,21,46,200,KOK,0.23,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,15,24,100,1118,Conservative,0
+FIN,Finland,parliament,2003,2003-03-16,18.6,40,200,KOK,0.2,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,253,15,663,1118,Conservative,0
+FIN,Finland,parliament,2007,2007-03-18,22.3,50,200,KOK,0.25,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,314,253,759,1118,Conservative,0
+FIN,Finland,parliament,2011,2011-04-17,20.4,44,200,KOK,0.22,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,700,314,383,1118,Conservative,0
+FIN,Finland,parliament,2015,2015-04-19,18.2,37,200,KOK,0.185,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,855,700,1145,1118,Conservative,0
+FIN,Finland,parliament,2019,2019-04-14,17,38,200,KOK,0.19,Kansallinen Kokoomus – Samlingspartiet,National Coalition Party,7.2451,67,1045,855,1510,1118,Conservative,0
+ISL,Iceland,parliament,1923,1923-10-27,53.6,23,40,Sj,0.575,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,923,922,1425,1342,Conservative,1
+ISL,Iceland,parliament,1927,1927-07-09,42.5,16,42,Sj,0.380952381,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,924,923,1428,1342,Conservative,1
+ISL,Iceland,parliament,1931,1931-06-12,43.8,15,42,Sj,0.3571428571,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,925,924,1429,1342,Conservative,1
+ISL,Iceland,parliament,1933,1933-07-16,48,20,42,Sj,0.4761904762,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,926,925,1431,1342,Conservative,1
+ISL,Iceland,parliament,1934,1934-06-24,42.32,20,49,Sj,0.4081632653,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,927,926,1431,1342,Conservative,1
+ISL,Iceland,parliament,1937,1937-06-29,41.3,17,49,Sj,0.3469387755,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,928,927,1432,1342,Conservative,1
+ISL,Iceland,parliament,1942,1942-07-05,39.5,17,49,Sj,0.3469387755,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,929,928,1434,1342,Conservative,1
+ISL,Iceland,parliament,1942,1942-10-19,38.5,20,52,Sj,0.3846153846,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,780,929,1434,1342,Conservative,1
+ISL,Iceland,parliament,1946,1946-06-30,39.5,20,52,Sj,0.3846153846,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,35,780,435,1342,Conservative,1
+ISL,Iceland,parliament,1949,1949-10-24,39.5,19,52,Sj,0.3653846154,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,259,35,742,1342,Conservative,1
+ISL,Iceland,parliament,1953,1953-06-28,37.1,21,52,Sj,0.4038461538,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,88,259,766,1342,Conservative,1
+ISL,Iceland,parliament,1956,1956-06-24,42.4,19,52,Sj,0.3653846154,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,665,88,762,1342,Conservative,1
+ISL,Iceland,parliament,1959,1959-06-28,42.5,20,52,Sj,0.3846153846,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,393,665,446,1342,Conservative,1
+ISL,Iceland,parliament,1959,1959-10-26,39.7,24,60,Sj,0.4,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,320,393,351,1342,Conservative,1
+ISL,Iceland,parliament,1963,1963-06-09,41.4,24,60,Sj,0.4,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,379,320,331,1342,Conservative,1
+ISL,Iceland,parliament,1967,1967-06-11,37.5,23,60,Sj,0.3833333333,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,318,379,553,1342,Conservative,1
+ISL,Iceland,parliament,1971,1971-06-13,36.2,22,60,Sj,0.3666666667,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,225,318,321,1342,Conservative,1
+ISL,Iceland,parliament,1974,1974-06-30,42.7,25,60,Sj,0.4166666667,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,637,225,272,1342,Conservative,1
+ISL,Iceland,parliament,1978,1978-06-25,32.7,20,60,Sj,0.3333333333,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,275,637,849,1342,Conservative,1
+ISL,Iceland,parliament,1979,1979-12-03,35.4,21,60,Sj,0.35,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,436,275,536,1342,Conservative,1
+ISL,Iceland,parliament,1983,1983-04-23,38.7,23,60,Sj,0.3833333333,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,114,436,752,1342,Conservative,1
+ISL,Iceland,parliament,1987,1987-04-25,27.2,18,63,Sj,0.2857142857,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,673,114,393,1342,Conservative,1
+ISL,Iceland,parliament,1991,1991-04-20,38.6,26,63,Sj,0.4126984127,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,274,673,127,1342,Conservative,1
+ISL,Iceland,parliament,1995,1995-04-08,37.1,25,63,Sj,0.3968253968,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,82,274,640,1342,Conservative,1
+ISL,Iceland,parliament,1999,1999-05-08,40.7,26,63,Sj,0.4126984127,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,592,82,158,1342,Conservative,1
+ISL,Iceland,parliament,2003,2003-05-10,33.7,22,63,Sj,0.3492063492,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,178,592,177,1342,Conservative,1
+ISL,Iceland,parliament,2007,2007-05-12,36.6,25,63,Sj,0.3968253968,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,265,178,246,1342,Conservative,1
+ISL,Iceland,parliament,2009,2009-04-25,23.7,16,63,Sj,0.253968254,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,36,265,538,1342,Conservative,1
+ISL,Iceland,parliament,2013,2013-04-27,26.7,19,63,Sj,0.3015873016,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,798,36,651,1342,Conservative,1
+ISL,Iceland,parliament,2016,2016-10-29,28.17,21,63,Sj,0.3333333333,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,1008,798,1482,1342,Conservative,1
+ISL,Iceland,parliament,2017,2017-10-28,25.2,16,63,Sj,0.253968254,Sjálfstæðisflokkurinn,Independence Party,7.4854,56,1021,1008,1502,1342,Conservative,1
+NOR,Norway,parliament,1900,1900-07-01,40.8,31,114,H,0.2719298246,Høyre,Conservative Party,7.8994,9,943,,,1435,Conservative,0
+NOR,Norway,parliament,1903,1903-09-16,44.8,52,117,H,0.4444444444,Høyre,Conservative Party,7.8994,9,944,943,1378,1435,Conservative,0
+NOR,Norway,parliament,1906,1906-08-27,32.8,36,123,H,0.2926829268,Høyre,Conservative Party,7.8994,9,945,944,1380,1435,Conservative,0
+NOR,Norway,parliament,1909,1909-10-25,41.5,41,123,H,0.3333333333,Høyre,Conservative Party,7.8994,9,946,945,1382,1435,Conservative,0
+NOR,Norway,parliament,1912,1912-10-21,33.2,20,123,H,0.162601626,Høyre,Conservative Party,7.8994,9,947,946,1384,1435,Conservative,0
+NOR,Norway,parliament,1915,1915-10-21,29,20,123,H,0.162601626,Høyre,Conservative Party,7.8994,9,948,947,1240,1435,Conservative,0
+NOR,Norway,parliament,1918,1918-10-21,30.4,40,126,H,0.3174603175,Høyre,Conservative Party,7.8994,9,949,948,1239,1435,Conservative,0
+NOR,Norway,parliament,1921,1921-10-24,33.3,42,150,H,0.28,Høyre,Conservative Party,7.8994,9,950,949,1235,1435,Conservative,0
+NOR,Norway,parliament,1924,1924-10-21,32.5,43,150,H,0.2866666667,Høyre,Conservative Party,7.8994,9,951,950,1233,1435,Conservative,0
+NOR,Norway,parliament,1927,1927-10-17,24.03,29,150,H,0.1933333333,Høyre,Conservative Party,7.8994,9,867,951,1231,1435,Conservative,0
+NOR,Norway,parliament,1930,1930-10-20,27.43,39,150,H,0.26,Høyre,Conservative Party,7.8994,9,866,867,1229,1435,Conservative,0
+NOR,Norway,parliament,1933,1933-10-16,20.22,30,150,H,0.2,Høyre,Conservative Party,7.8994,9,865,866,1225,1435,Conservative,0
+NOR,Norway,parliament,1936,1936-10-19,21.32,36,150,H,0.24,Høyre,Conservative Party,7.8994,9,864,865,1223,1435,Conservative,0
+NOR,Norway,parliament,1945,1945-10-08,17,25,150,H,0.1666666667,Høyre,Conservative Party,7.8994,9,220,864,666,1435,Conservative,0
+NOR,Norway,parliament,1949,1949-10-10,15.91,21,150,H,0.14,Høyre,Conservative Party,7.8994,9,478,220,58,1435,Conservative,0
+NOR,Norway,parliament,1953,1953-10-12,18.43,26,150,H,0.1733333333,Høyre,Conservative Party,7.8994,9,167,478,487,1435,Conservative,0
+NOR,Norway,parliament,1957,1957-10-07,16.8,29,150,H,0.1933333333,Høyre,Conservative Party,7.8994,9,429,167,221,1435,Conservative,0
+NOR,Norway,parliament,1961,1961-09-11,19.3,29,150,H,0.1933333333,Høyre,Conservative Party,7.8994,9,622,429,61,1435,Conservative,0
+NOR,Norway,parliament,1965,1965-09-12,20.3,31,150,H,0.2066666667,Høyre,Conservative Party,7.8994,9,517,622,510,1435,Conservative,0
+NOR,Norway,parliament,1969,1969-09-07,18.8,29,150,H,0.1933333333,Høyre,Conservative Party,7.8994,9,580,517,284,1435,Conservative,0
+NOR,Norway,parliament,1973,1973-09-09,17.38,29,155,H,0.1870967742,Høyre,Conservative Party,7.8994,9,523,580,822,1435,Conservative,0
+NOR,Norway,parliament,1977,1977-09-11,24.8,41,155,H,0.264516129,Høyre,Conservative Party,7.8994,9,499,523,520,1435,Conservative,0
+NOR,Norway,parliament,1981,1981-09-14,31.7,54,155,H,0.3483870968,Høyre,Conservative Party,7.8994,9,100,499,81,1435,Conservative,0
+NOR,Norway,parliament,1985,1985-09-08,30.4,50,157,H,0.3184713376,Høyre,Conservative Party,7.8994,9,207,100,181,1435,Conservative,0
+NOR,Norway,parliament,1989,1989-09-11,22.2,37,165,H,0.2242424242,Høyre,Conservative Party,7.8994,9,571,207,394,1435,Conservative,0
+NOR,Norway,parliament,1993,1993-09-13,17,28,165,H,0.1696969697,Høyre,Conservative Party,7.8994,9,404,571,588,1435,Conservative,0
+NOR,Norway,parliament,1997,1997-09-16,14.3,23,165,H,0.1393939394,Høyre,Conservative Party,7.8994,9,669,404,813,1435,Conservative,0
+NOR,Norway,parliament,2001,2001-09-10,21.2,38,165,H,0.2303030303,Høyre,Conservative Party,7.8994,9,328,669,333,1435,Conservative,0
+NOR,Norway,parliament,2005,2005-09-12,14.1,23,169,H,0.1360946746,Høyre,Conservative Party,7.8994,9,3,328,300,1435,Conservative,0
+NOR,Norway,parliament,2009,2009-09-14,17.2,30,169,H,0.1775147929,Høyre,Conservative Party,7.8994,9,285,3,693,1435,Conservative,0
+NOR,Norway,parliament,2013,2013-09-09,25.8,48,169,H,0.2840236686,Høyre,Conservative Party,7.8994,9,801,285,551,1435,Conservative,0
+NOR,Norway,parliament,2017,2017-09-11,25,45,169,H,0.2662721893,Høyre,Conservative Party,7.8994,9,1017,801,1065,1435,Conservative,0
+SWE,Sweden,parliament,1911,1911-09-24,31.2,64,230,M,0.2782608696,Moderaterna,Moderate Party,7.8907,35,961,,,657,Conservative,0
+SWE,Sweden,parliament,1914,1914-04-07,37.7,86,230,M,0.3739130435,Moderaterna,Moderate Party,7.8907,35,962,961,1369,657,Conservative,0
+SWE,Sweden,parliament,1914,1914-09-13,36.5,86,230,M,0.3739130435,Moderaterna,Moderate Party,7.8907,35,963,962,1369,657,Conservative,0
+SWE,Sweden,parliament,1917,1917-09-16,24.7,57,217,M,0.2626728111,Moderaterna,Moderate Party,7.8907,35,964,963,1368,657,Conservative,0
+SWE,Sweden,parliament,1920,1920-09-17,27.8,70,228,M,0.3070175439,Moderaterna,Moderate Party,7.8907,35,965,964,1193,657,Conservative,0
+SWE,Sweden,parliament,1921,1921-09-26,25.8,62,230,M,0.2695652174,Moderaterna,Moderate Party,7.8907,35,966,965,1191,657,Conservative,0
+SWE,Sweden,parliament,1924,1924-09-21,26.1,65,230,M,0.2826086957,Moderaterna,Moderate Party,7.8907,35,967,966,1189,657,Conservative,0
+SWE,Sweden,parliament,1928,1928-09-21,29.4,73,230,M,0.3173913043,Moderaterna,Moderate Party,7.8907,35,968,967,1186,657,Conservative,0
+SWE,Sweden,parliament,1932,1932-09-18,23.5,58,230,M,0.252173913,Moderaterna,Moderate Party,7.8907,35,969,968,1184,657,Conservative,0
+SWE,Sweden,parliament,1936,1936-09-20,17.6,44,230,M,0.1913043478,Moderaterna,Moderate Party,7.8907,35,970,969,1182,657,Conservative,0
+SWE,Sweden,parliament,1940,1940-09-15,18,42,230,M,0.1826086957,Moderaterna,Moderate Party,7.8907,35,971,970,1179,657,Conservative,0
+SWE,Sweden,parliament,1944,1944-09-17,15.8,39,230,M,0.1695652174,Moderaterna,Moderate Party,7.8907,35,485,971,1180,657,Conservative,0
+SWE,Sweden,parliament,1948,1948-09-19,12.3,23,230,M,0.1,Moderaterna,Moderate Party,7.8907,35,431,485,628,657,Conservative,0
+SWE,Sweden,parliament,1952,1952-09-21,14.4,31,230,M,0.1347826087,Moderaterna,Moderate Party,7.8907,35,234,431,361,657,Conservative,0
+SWE,Sweden,parliament,1956,1956-09-16,17.1,42,231,M,0.1818181818,Moderaterna,Moderate Party,7.8907,35,450,234,781,657,Conservative,0
+SWE,Sweden,parliament,1958,1958-06-01,19.5,45,231,M,0.1948051948,Moderaterna,Moderate Party,7.8907,35,251,450,380,657,Conservative,0
+SWE,Sweden,parliament,1960,1960-09-18,16.6,39,232,M,0.1681034483,Moderaterna,Moderate Party,7.8907,35,295,251,208,657,Conservative,0
+SWE,Sweden,parliament,1964,1964-09-20,13.7,32,233,M,0.1373390558,Moderaterna,Moderate Party,7.8907,35,41,295,424,657,Conservative,0
+SWE,Sweden,parliament,1968,1968-09-15,12.9,29,233,M,0.1244635193,Moderaterna,Moderate Party,7.8907,35,655,41,506,657,Conservative,0
+SWE,Sweden,parliament,1970,1970-09-20,11.5,41,350,M,0.1171428571,Moderaterna,Moderate Party,7.8907,35,258,655,219,657,Conservative,0
+SWE,Sweden,parliament,1973,1973-09-16,14.3,51,350,M,0.1457142857,Moderaterna,Moderate Party,7.8907,35,215,258,577,657,Conservative,0
+SWE,Sweden,parliament,1976,1976-09-19,15.6,55,349,M,0.1575931232,Moderaterna,Moderate Party,7.8907,35,262,215,438,657,Conservative,0
+SWE,Sweden,parliament,1979,1979-09-16,20.3,73,349,M,0.2091690544,Moderaterna,Moderate Party,7.8907,35,473,262,587,657,Conservative,0
+SWE,Sweden,parliament,1982,1982-09-19,23.6,86,349,M,0.2464183381,Moderaterna,Moderate Party,7.8907,35,175,473,142,657,Conservative,0
+SWE,Sweden,parliament,1985,1985-09-15,21.3,76,349,M,0.217765043,Moderaterna,Moderate Party,7.8907,35,48,175,647,657,Conservative,0
+SWE,Sweden,parliament,1988,1988-09-18,18.3,66,349,M,0.1891117479,Moderaterna,Moderate Party,7.8907,35,428,48,478,657,Conservative,0
+SWE,Sweden,parliament,1991,1991-09-15,21.9,80,349,M,0.229226361,Moderaterna,Moderate Party,7.8907,35,472,428,732,657,Conservative,0
+SWE,Sweden,parliament,1994,1994-09-18,22.4,80,349,M,0.229226361,Moderaterna,Moderate Party,7.8907,35,412,472,779,657,Conservative,0
+SWE,Sweden,parliament,1998,1998-09-20,22.9,82,349,M,0.2349570201,Moderaterna,Moderate Party,7.8907,35,33,412,156,657,Conservative,0
+SWE,Sweden,parliament,2002,2002-09-15,15.3,55,349,M,0.1575931232,Moderaterna,Moderate Party,7.8907,35,156,33,503,657,Conservative,0
+SWE,Sweden,parliament,2006,2006-09-17,26.1,97,349,M,0.2779369628,Moderaterna,Moderate Party,7.8907,35,629,156,641,657,Conservative,0
+SWE,Sweden,parliament,2010,2010-09-19,30.06,107,349,M,0.3065902579,Moderaterna,Moderate Party,7.8907,35,512,629,475,657,Conservative,0
+SWE,Sweden,parliament,2014,2014-09-14,23.33,84,349,M,0.2406876791,Moderaterna,Moderate Party,7.8907,35,828,512,854,657,Conservative,0
+SWE,Sweden,parliament,2018,2018-09-09,19.84,70,349,M,0.2005730659,Moderaterna,Moderate Party,7.8907,35,1041,828,1149,657,Conservative,0
