@@ -1,0 +1,363 @@
+---
+title: 'Dæmaverkefni 3: Fyrri hluti'
+output:
+  html_document:
+    number_sections: true
+    theme: united
+    toc: yes
+    toc_depth: 4
+    toc_float:
+      collapsed: false
+    df_print: kable
+---
+
+```{css, echo = FALSE}
+body {
+      font-size: 1.5em;
+    }
+    
+ul {
+  list-style-type: none;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+
+
+```
+
+Markmið þessarar æfingar er að kynna ykkur fyrir myndrænni framsetningu í R með áherslu á framsetningu á flokkunarbreytum. Þið notið skjalið *03_daemaverkefni_nem.Rmd* sem grunn, en þið finnið það á Canvas og vistið í verkefnamöppunni ykkar.
+
+```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(knitr) 
+library(tidyverse)
+
+knitr::opts_chunk$set(echo = TRUE,message=FALSE,warning=FALSE)
+
+gtd <- readRDS("gtd.rds")
+
+#write_rds(gtd,file="gtd.rds")
+
+```
+
+Ef þið hafið ekki sótt pakkana sem eru notaðir í þessu verkefni áður þá mun R vera til vandræða. Ein leið til að sækja pakka er að fara í valmyndina efst í RStudio og velja "Tools \> Install Packages..." og slá nafnið á pakkanum eða pökkunum sem vantar í auða reitinn og smella á "Install". Það þarf einungis að gera þetta einu sinni.
+
+Munið að vista skjalið ykkar reglulega og vefa það saman annað slagið til að þið getið strax lagfært villur sem gætu komið upp.
+
+# Dæmi úr lesefni
+
+Dæmin að neðan eru úr *Introduction to Modern Statistics* og vísa númerin hér að neðan í kaflanúmer og númer dæma í kafla í þeirri bók. Dæmin eru eftirfarandi:
+
+-   **Flokkunarbreytur (vikur 7-8):** 4.2, 4.4 og 4.6.
+
+# R-verkefni
+
+## Hryðjuverkaárásir
+
+Hefur ógnin sem stafar af hryðjuverkum í heiminum aukist eða minnkað á undanförnum áratugum? Í hvaða löndum hafa flestir látist af völdum hryðjuverkaárása? Hvaða tegund hryðjuverkaárása er algengust?
+
+Í þessu verkefni munt þú vinna með gögn um hryðjuverkaárásir sem teknar hafa verið saman af fræðafólki í gagnagrunn sem nefnist [Global Terrorism Database](https://www.start.umd.edu/research-projects/global-terrorism-database-gtd). Gagnagrunnurinn er öllum aðgengilegur, en hann inniheldur upplýsingar um rúmlega 200 þúsund árásir sem framkvæmdar voru á árunum 1970 til 2020. Í upprunalegu gögnunum er greiningareiningin einstök hryðjuverkaárás (**hver lína í gögnunum inniheldur upplýsingar um eina árás**). Þar sem skráin er mjög stór þá hef ég minnkað umfang gagnanna og gert aðgengileg á Canvas síðu námskeiðsins. **Þið þurfið að sækja skránna og vista í sömu möppu og þetta skjal.**  
+
+Gögnin innihalda upplýsingar um 209.706 árásir frá 1970 til 2020. Breyturnar sem eru skráðar fyrir hverja árás í þessu minnkaða gagnasafni eru eftirfarandi:
+
+- `date`: Dagsetningin árásar (ár, mánuður og dagur saman). 
+
+- `year`, `month` og `day`: Ár, mánuður og dagur árásar
+
+- `city`: Borgin og ríkið/svæðið þar sem árásin átti sér stað
+
+- `country`: Ríkið eða svæðið sem árásin átti sér stað
+
+- `region`: Heimshlutinn þar sem árásinn átti sér stað
+
+- `att_type`: Tegund árásar. Tekur eitt af níu gildum
+
+  1.  Launmorð (e. assassination)
+
+  2.  Vopnuð árás (e. armed assult)
+
+  3.  Sprenging (e. bombing/explosion)
+
+  4.  Flugrán eða rán á öðru farartæki (e. hijacking) 
+
+  5.  Gíslataka á tilteknum stað (e. hostage taking, barricade incident)
+
+  6.  Gíslataka/mannrán (e. hostage taking, kidnapping)
+
+  7.  Innviðaárás (e. facility/infrastructure attack) 
+
+  8.  Óvopnuð árás, framkvæmd t.d. með efnavopnum (e. unarmed assult)
+
+  9.  Óþekkt tegund (e. unknown)
+
+- `nkill`: Fjöldi staðfestra dauðsfalla í árásinni
+
+Aftast í þessu skjali má finna nánari upplýsingar um hvað telst vera hryðjuverk skv. GTD, um flokkana hér að ofan og um hvernig dauðsföll eru skráð.
+
+Í grunnskjalinu er kóðabútur sem hleður nauðsynlegum pökkum og gögnunum í minni. Gagnaramminn með gögnunum heitir `gtd`. Það er **nauðsynlegt** að gagnaskráin sé í sömu möppu og .Rmd skráin til að kóðinn virki! 
+$~$
+
+### Fjöldi hryðjuverkaárása eftir nokkrum bakgrunnsbreytum
+
+Byrjum á því að fá tilfinningu fyrir því hvernig fjöldi hryðjuverkaárása dreifist eftir nokkrum þáttum. Þið setjið kóðann sem þarf til að svara spurningunni inn í kóðabút og svarið svo spurningunum fyrir neðan kóðabútinn.
+
+```{r include=FALSE}
+
+gtd |> 
+  count(month)
+
+gtd |> 
+  count(region)
+
+gtd |> 
+  count(country,sort=TRUE)
+
+gtd |> 
+  count(att_type) |> 
+  mutate(n/sum(n))
+
+gtd |> 
+  filter(year>2010 & att_type=="Assassination") |> 
+  count(city, sort=TRUE)
+
+```
+
+1. Í hvaða mánuði ársins áttu flestar hryðjuverkaárásir sér stað?
+
+2. Í hvaða heimshluta áttu flestar hryðjuverkaárásir sér stað?
+
+3. Í hvaða fimm löndum áttu flestar hryðjuverkaárásir sér stað?
+
+4. Hvaða hlutfall hryðjuverkaárása í gögnunum eru launmorð ("Assassination")?
+
+5. ÁSKORUN: Í hvaða borg áttu flest launmorð sér stað á tímabilinu 2011 til 2020?
+
+### Súlurit af fjölda hryðjuverkaárása eftir heimshluta
+
+Gerðu súlurit sem sýnir fjölda hryðjuverkaárása eftir heimshluta á tímabilinu. Settu inn merkingar á grafið. Titillinn ætti að vera: "Fjöldi hryðjuverkaárása eftir heimshluta 1970-2020". Taktu út titil á x- og y-ás þar sem þeir eru óþarfar í ljósi titilsins á grafinu. Settu eftirfarandi `caption` undir myndina: "Gögn: Global Terrorism Database". 
+
+Til að fá fullt hús stiga þá þarf súluritið að uppfylla tvö skilyrði. Ég mæli með að geyma þetta þangað til síðast.
+
+- Súlurnar eiga að vera raðaðar í stærðarröð, þannig að heimshlutinn með flestar árásir raðist efst og svo koll af kolli.
+
+- Heimshlutarnir þurfa að vera sameinaðir og nöfnin íslenskuð með eftirfarandi hætti:
+
+  - "Central America & Caribbean" og "South America" verða "Mið- og Suður-Ameríka"
+  
+  - "North America" verður "Norður-Ameríka"
+  
+  - "Australasia & Oceania", "Central Asia", "East Asia", "South Asia" og "Southeast Asia" verða "Asía og Eyjaálfa"
+  
+  - "Eastern Europe" og "Western Europe" verða "Evrópa"
+  
+  - "Sub-Saharan Africa" verður "Afríka sunnan Sahara"
+  
+  - "Middle East & North Africa" verður "Mið-Austurlönd og Norður-Afríka
+
+```{r include=FALSE}
+
+gtd <- gtd |> mutate(region2=fct_recode(region,
+                           "Mið- og Suður-Ameríka" = "Central America & Caribbean",
+                           "Mið- og Suður-Ameríka" = "South America",
+                           "Norður-Ameríka" = "North America",
+                           "Asía og Eyjaálfa" = "Australasia & Oceania",
+                           "Asía og Eyjaálfa" = "Central Asia",
+                           "Asía og Eyjaálfa" = "East Asia",
+                           "Evrópa" = "Eastern Europe",
+                           "Mið-Austurlönd og Norður-Afríka" = "Middle East & North Africa",
+                           "Asía og Eyjaálfa" = "South Asia",
+                           "Asía og Eyjaálfa" = "Southeast Asia",
+                           "Afríka sunnan Sahara" = "Sub-Saharan Africa",
+                           "Evrópa" = "Western Europe"),
+                     att_type2 = fct_recode(att_type,
+                                            )) 
+
+gtd |> 
+  count(region) |> 
+  ggplot(aes(x=region,y=n)) +
+  geom_col() +
+  coord_flip()
+
+gtd |> 
+  count(region2) |> 
+  ggplot(aes(x=fct_reorder(region2,n),y=n)) +
+  geom_col() +
+  coord_flip()
+
+# gtd |>
+#   mutate(att_type=fct_lump_n(att_type,n=2)) |> 
+#   count(region2,att_type) |>
+#   group_by(region2) |> 
+#   mutate(freq=n/sum(n)) |> 
+#   ggplot(aes(x=region2,y=freq,fill=att_type)) +
+#   geom_col() +
+#   coord_flip() +
+#   theme(legend.position="bottom")
+
+```
+
+### Línurit af fjölda hryðjuverkaárása yfir tíma
+
+Gerðu línurit sem sýnir þróunina á fjölda hryðjuverkaárása eftir heimshluta á tímabilinu. Settu inn merkingar á grafið. Titillinn ætti að vera: "Þróun fjölda hryðjuverkaárása eftir heimshluta 1970-2020". Taktu út titil á x- og y-ás þar sem þeir eru óþarfar í ljósi titilsins á grafinu. Settu eftirfarandi `caption` undir myndina: "Gögn: Global Terrorism Database". 
+
+Til að fá fullt hús stiga þá þarf súluritið að uppfylla tvö skilyrði. Ég mæli með að geyma þetta þangað til síðast.
+
+- Grafinu ætti að vera skipt niður í smámyndir (e. facets) eftir heimshluta.
+
+- Heimshlutarnir ættu að vera sameinaðir og íslenskaðir eins og í dæminu hér á undan.
+
+```{r include=FALSE}
+gtd |> 
+  count(year,region) |> 
+  ggplot(aes(x=year,y=n,color=region)) +
+  geom_line()
+
+gtd |> 
+  count(year,region) |> 
+  ggplot(aes(x=year,y=n)) +
+  facet_wrap(~region) +
+  geom_line()
+
+gtd |> 
+  count(year,region2) |> 
+  ggplot(aes(x=year,y=n)) +
+  facet_wrap(~region2) +
+  geom_line()
+
+
+```
+
+**Túlkið nú grafið fyrir neðan kóðabútinn. Þið getið haft eftirfarandi spurningar til hliðsjónar: Hvernig er fjöldi hryðjuverkaárása breytilegur eftir heimshluta? Er þróunin ólík í heimshlutunum? Svarið ætti alls ekki að vera meira en 150 orð.**
+
+### BÓNUS (Erfitt en valkvætt, gefur aukastig)
+
+Setjið fram staðlað staflarit (e. standardized bar graph) sem sýnir hlutfallslegan fjölda ólíkra tegunda hryðjuverkaárása í þeim fimm borgum þar sem flestar hryðjuverkaárásir hafa átt sér stað. Fylgið eftirfarandi fyrirmælum til að fá fullt hús bónusstiga:
+
+- Grafið ætti að vera tilbúið til birtingar í íslenskum fjölmiðli. Passið að það sé með titil og aðrar nauðsynlegar merkingar (á íslensku). 
+
+- Fellið saman breytuna sem sýnir tegundir hryðjuverkaárása. Nýja breytan ætti að sýna tegundir sem eru meira en 10% af heildarfjölda árása aðskilið og allar aðrar tegundir árása sameinaðar undir "Annað og óþekkt". Íslenskið tegundir hryðjuverkaárása sem birtast á grafinu.
+
+- Sýnið einungis borgirnar fimm þar sem flestar hryðjuverkaárásir hafa átt sér stað á grafinu, ekki sýna súlu/r fyrir aðrar borgir sameinaðar.
+
+Það eru ýmsar leiðir sem er hægt að fara til að búa til þetta graf, en ein möguleg leið er eftirfarandi:
+
+```{r eval=FALSE, echo=TRUE}
+
+gtd |> 
+  # 1. Fella saman gildi af att_type þannig að einungis gildi með yfir 10% tilvika verði aðgreind
+  # 2. Íslenska gildin af att_type
+  # 3. Fella saman gildi af city þannig að einungis fimm tíðustu gildin verði aðgreind
+  # 4. Sía út gildið "Other" eða "Annað" fyrir city breytuna
+  # 5. Finna fjölda tilvika með hverja samsetningu af borg og tegund hryðjuverkaárásar
+  # 6. Hópa gögnin saman eftir borg
+  # 7. Reikna hlutfallslegan fjölda tegunda árása innan hverrar borgar
+  ggplot(aes(x=city,y=freq,fill=att_type)) +
+  geom_col() +
+  coord_flip() +
+  theme(legend.position="bottom")
+  
+```
+
+
+```{r eval=FALSE, include=FALSE}
+
+gtd |> 
+  mutate(att_type=fct_lump_prop(att_type,prop=0.1,other_level="Annað eða óþekkt")) |> 
+  mutate(att_type=fct_recode(att_type,
+                             "Vopnuð árás" = "Armed Assault",
+                             "Launmorð" = "Assassination",
+                             "Sprenging" = "Bombing/Explosion")) |> 
+  mutate(city=fct_lump_n(factor(city),n=5)) |>
+  filter(city!="Other") |> 
+  count(city,att_type) |> 
+  group_by(city) |> 
+  mutate(freq=n/sum(n)) |> 
+  ggplot(aes(x=city,y=freq,fill=att_type)) +
+  geom_col() +
+  coord_flip() +
+  theme(legend.position="bottom")
+
+
+```
+
+**Túlkið nú grafið fyrir neðan kóðabútinn. Þið getið haft eftirfarandi spurningar til hliðsjónar: Eru hlutfallsleg skipting tegunda af hryðjuverkaárásum svipuð í borgunum fimm? Er einhver borg sem sker sig úr? Hvaða borg og hvernig? Svarið ætti alls ekki að vera meira en 150 orð.**
+
+Þá erum við komin á leiðarenda að sinni. Í næstu viku bætist svo við seinni hluti dæmaverkefnisins. Þið þurfið því að bíða eftir honum áður en þið getið skilað þessu inn. Gangi ykkur vel!
+
+## Viðauki með nánari upplýsingum um GTD gagnasafnið
+
+**GTD Definition of Terrorism and Inclusion Criteria**
+
+The GTD defines a terrorist attack as the threatened or actual use of illegal force and violence by a non-state actor to attain a political, economic, religious, or social goal through fear, coercion, or intimidation. In practice this means in order to consider an incident for inclusion in the GTD, all three of the following attributes must be present:
+
+-   The incident must be intentional – the result of a conscious calculation on the part of a perpetrator.
+
+-   The incident must entail some level of violence or immediate threat of violence -including property violence, as well as violence against people.
+
+-   The perpetrators of the incidents must be sub-national actors. The database does not include acts of state terrorism.
+
+In addition, at least two of the following three criteria must be present for an incident to be included in the GTD:
+
+-   Criterion 1: The act must be aimed at attaining a political, economic, religious, or social goal. In terms of economic goals, the exclusive pursuit of profit does not satisfy this criterion. It must involve the pursuit of more profound, systemic economic change.
+
+-   Criterion 2: There must be evidence of an intention to coerce, intimidate, or convey some other message to a larger audience (or audiences) than the immediate victims. It is the act taken as a totality that is considered, irrespective if every individual involved in carrying out the act was aware of this intention. As long as any of the planners or decision-makers behind the attack intended to coerce, intimidate or publicize, the intentionality criterion is met.
+
+-   Criterion 3: The action must be outside the context of legitimate warfare activities. That is, the act must be outside the parameters permitted by international humanitarian law, insofar as it targets non-combatants
+
+**Attack type (att_type)**
+
+This field captures the general method of attack and often reflects the broad class of tactics used. It consists of nine categories, which are defined below. Up to three attack types can be recorded for each incident. Typically, only one attack type is recorded for each incident unless the attack is comprised of a sequence of events.
+
+When multiple attack types may apply, the most appropriate value is determined based on the hierarchy below. For example, if an assassination is carried out through the use of an explosive, the Attack Type is coded as Assassination, not Bombing/Explosion.
+
+1.  ASSASSINATION
+
+An act whose primary objective is to kill one or more specific, prominent individuals. Usually carried out on persons of some note, such as high-ranking military officers, government officials, celebrities, etc. Not to include attacks on non-specific members of a targeted group. The killing of a police officer would be an armed assault unless there is reason to believe the attackers singled out a particularly prominent officer for assassination.
+
+2.  ARMED ASSAULT
+
+An attack whose primary objective is to cause physical harm or death directly to human beings by use of a firearm, incendiary, or sharp instrument (knife, etc.). Not to include attacks involving the use of fists, rocks, sticks, or other handheld (less-than-lethal) weapons. Also includes attacks involving certain classes of explosive devices in addition to firearms, incendiaries, or sharp instruments. The explosive device subcategories that are included in this classification are grenades, projectiles, and unknown or other explosive devices that are thrown. 
+
+3.  BOMBING/EXPLOSION
+
+An attack where the primary effects are caused by an energetically unstable material undergoing rapid decomposition and releasing a pressure wave that causes physical damage to the surrounding environment. Can include either high or low explosives (including a dirty bomb) but does not include a nuclear explosive device that releases energy from fission and/or fusion, or an incendiary device where decomposition takes place at a much slower rate.
+
+If an attack involves certain classes of explosive devices along with firearms, incendiaries, or sharp objects, then the attack is coded as an armed assault only. The explosive device subcategories that are included in this classification are grenades, projectiles, and unknown or other explosive devices that are thrown in which the bombers are also using firearms or incendiary devices.
+
+4.  HIJACKING
+
+An act whose primary objective is to take control of a vehicle such as an aircraft, boat, bus, etc. for the purpose of diverting it to an unprogrammed destination, force the release of prisoners, or some other political objective. Obtaining payment of a ransom should not the sole purpose of a Hijacking, but can be one element of the incident so long as additional objectives have also been stated. Hijackings are distinct from Hostage Taking because the target is a vehicle, regardless of whether there are people/passengers in the vehicle.
+
+5.  HOSTAGE TAKING (BARRICADE INCIDENT)
+
+An act whose primary objective is to take control of hostages for the purpose of achieving a political objective through concessions or through disruption of normal operations. Such attacks are distinguished from kidnapping since the incident occurs and usually plays out at the target location with little or no intention to hold the hostages for an extended period in a separate clandestine location.
+
+6.  HOSTAGE TAKING (KIDNAPPING)
+
+An act whose primary objective is to take control of hostages for the purpose of achieving a political objective through concessions or through disruption of normal operations. Kidnappings are distinguished from Barricade Incidents (above) in that they involve moving and holding the hostages in another location.
+
+7.  FACILITY / INFRASTRUCTURE ATTACK
+
+An act, excluding the use of an explosive, whose primary objective is to cause damage to a non-human target, such as a building, monument, train, pipeline, etc. Such attacks include arson and various forms of sabotage (e.g., sabotaging a train track is a facility/infrastructure attack, even if passengers are killed). Facility/infrastructure attacks can include acts which aim to harm an installation, yet also cause harm to people incidentally (e.g. an arson attack primarily aimed at damaging a building, but causes injuries or fatalities).
+
+8.  UNARMED ASSAULT
+
+An attack whose primary objective is to cause physical harm or death directly to human beings by any means other than explosive, firearm, incendiary, or sharp instrument (knife, etc.). Attacks involving chemical, biological or radiological weapons are considered unarmed assaults.
+
+9.  UNKNOWN
+
+The attack type cannot be determined from the available information.
+
+**Total Number of Fatalities (nkill)**
+
+This field stores the number of total confirmed fatalities for the incident. The number includes all victims and attackers who died as a direct result of the incident.
+
+Where there is evidence of fatalities, but a figure is not reported or it is too vague to be of use, this field remains blank. If information is missing regarding the number of victims killed in an attack, but perpetrator fatalities are known, this value will reflect only the number of perpetrators who died as a result of the incident. Likewise, if information on the number of perpetrators killed in an attack is missing, but victim fatalities are known, this field will only report the number of victims killed in the incident.
+
+Where several independent sources report different numbers of casualties, the database will usually reflect the number given by the most recent source. However,the most recent source will not be used if the source itself is of questionable validity or if the source bases its casualty numbers on claims made by a perpetrator group. When there are several “most recent” sources published around the same time, or there are concerns about the validity of a recent source, the majority figure will be used. Where there is no majority figure among independent sources, the database will record the lowest proffered fatality figure, unless that figure comes from a source of questionable validity or there is another compelling reason to do otherwise. Conflicting reports of fatalities will be noted in the “Additional Notes” field.
